@@ -19,11 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Anne Staal
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Ik kies voor het startniveau: rood, maar qua html en css voelt het meer als zwart. Maar ik ga voor de rode piste.
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
- 
+  Ik ga me vooral focussen op de surface plane. 
 </details>
 
 
@@ -36,15 +35,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
-
+    https://nl.pinterest.com/ 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+    De eerste pagina die ik ga na maken is de homepagina  
+  <img src="readme-images/pinterest_home.PNG" width="375px" alt="homepagina van Pinterest">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+    De tweede pagina die ik ga namaken is de zoekpagina op pinterest.  
+  <img src="readme-images/pinterest_zoeken.PNG" width="375px" alt="de zoekpagina van Pinterest">
  
 </details>
 

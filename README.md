@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Anne Staal
 
   #### Je startniveau:
-  Ik kies voor het startniveau: rood, maar qua html en css voelt het meer als zwart. Maar ik ga voor de rode piste.
+  Ik kies voor het startniveau: rood.
 
   #### Je focus:
   Ik ga me vooral focussen op de surface plane. 
@@ -35,14 +35,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-    https://nl.pinterest.com/ 
+    GoodReads
+    https://www.goodreads.com/?ref=nav_hom
   #### Screenshot(s) van de eerste pagina (small screen): 
-    De eerste pagina die ik ga na maken is de homepagina  
-  <img src="readme-images/pinterest_home.PNG" width="375px" alt="homepagina van Pinterest">
+    De eerste pagina die ik ga na maken is de My Books pagina  
+  <img src="readme-images/MyBooks.png" width="375px" alt="pagina van de website GoodReads waar je al je opgeslagen boeken kan zien">
 
   #### Screenshot(s) van de tweede pagina (small screen):
     De tweede pagina die ik ga namaken is de zoekpagina op pinterest.  
-  <img src="readme-images/pinterest_zoeken.PNG" width="375px" alt="de zoekpagina van Pinterest">
+  <img src="readme-images/BoekDetail.png" width="375px" alt="pagina van de website GoodReads waar je alle details kan zien">
  
 </details>
 

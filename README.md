@@ -65,16 +65,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
+  
+  ### My books pagina:
+  #### de hele pagina (my books pagina): 
+  <img src="readme-images/my_books.jpg" width="375px" alt="breakdown van de my books pagina">
+  <img src="readme-images/breakdownschets_my_books.jpg" width="375px" alt="volledige breakdownschets van de my books pagina">
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### dynamisch deel (bijv menu): 
+  #### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
+  #### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
+  ### Boek in detail pagina:
+  #### de hele pagina (my books pagina): 
+  <img src="readme-images/details_page.jpg" width="375px" alt="breakdown van een pagina met details van een boek">
+  <img src="readme-images/breakdownschets_Book_detail.jpg" width="375px" alt="volledige breakdownschets van een pagina met details van een boek">
+
+  #### dynamisch deel (bijv menu): 
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+
+  #### wellicht nog een dynamisch deel (bijv filter): 
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 </details>
 
 

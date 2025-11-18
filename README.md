@@ -71,14 +71,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### My books pagina:
   #### De hele pagina: 
   Bij deze afbeelding is te zien in welke secties ik de pagina heb opgedeeld. De secties met een rood kruis ga ik niet uitvoeren.
-  <img src="readme-images/my_books.jpg" width="450px" alt="breakdown van de my books pagina">
+  <img src="readme-images/my_books.jpg" width="375px" alt="breakdown van de my books pagina">
   
   Hier is mijn breakdownschets van de My Books pagina.
   <img src="readme-images/breakdownschets_my_books.jpg" width="375px" alt="volledige breakdownschets van de my books pagina">
   
 
   #### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="350px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="250px" alt="breakdown van een dynamisch deel">
 
   #### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">

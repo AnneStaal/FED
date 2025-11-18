@@ -70,7 +70,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### My books pagina:
   #### de hele pagina (my books pagina): 
-  <img src="readme-images/my_books.jpg" width="500px" alt="breakdown van de my books pagina">
+  <img src="readme-images/my_books.jpg" width="475px" alt="breakdown van de my books pagina">
   <img src="readme-images/breakdownschets_my_books.jpg" width="375px" alt="volledige breakdownschets van de my books pagina">
 
   #### dynamisch deel (bijv menu): 

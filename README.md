@@ -66,15 +66,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
   Hier is een legenda om het makkelijker te maken om mijn breakdownschets te begrijpen.
-  <img src="readme-images/legenda.jpg" width="375px" alt="legenda voor de breakdownschetsen">
+  <img src="readme-images/legenda.jpg" width="150px" alt="legenda voor de breakdownschetsen">
 
   ### My books pagina:
   #### de hele pagina (my books pagina): 
-  <img src="readme-images/my_books.jpg" width="375px" alt="breakdown van de my books pagina">
+  <img src="readme-images/my_books.jpg" width="500px" alt="breakdown van de my books pagina">
   <img src="readme-images/breakdownschets_my_books.jpg" width="375px" alt="volledige breakdownschets van de my books pagina">
 
   #### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/dummy-plaatje.jpg" width="350px" alt="breakdown van een dynamisch deel">
 
   #### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">

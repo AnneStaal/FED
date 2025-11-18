@@ -65,8 +65,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
+  <img src="readme-images/legenda.jpg" width="100px" alt="legenda voor de breakdownschetsen">
   Hier is een legenda om het makkelijker te maken om mijn breakdownschets te begrijpen.
-  <img src="readme-images/legenda.jpg" width="50px" alt="legenda voor de breakdownschetsen">
 
   ### My books pagina:
   #### De hele pagina: 

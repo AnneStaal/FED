@@ -71,7 +71,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### My books pagina:
   #### De hele pagina: 
   <img src="readme-images/my_books.jpg" width="450px" alt="breakdown van de my books pagina">
+  Bij deze afbeelding is te zien in welke secties ik de pagina heb opgedeeld. De secties met een rood kruis ga ik niet uitvoeren.
   <img src="readme-images/breakdownschets_my_books.jpg" width="375px" alt="volledige breakdownschets van de my books pagina">
+  Hier is mijn breakdownschets van de My Books pagina.
 
   #### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="350px" alt="breakdown van een dynamisch deel">
@@ -82,7 +84,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Boek in detail pagina:
   #### De hele pagina: 
   <img src="readme-images/details_page.jpg" width="375px" alt="breakdown van een pagina met details van een boek">
+  Ook de pagina met details van een boek heb ik in verschillende secties verdeeld.De secties met een rood kruis ga ik niet uitvoeren.
   <img src="readme-images/breakdownschets_Book_detail.jpg" width="375px" alt="volledige breakdownschets van een pagina met details van een boek">
+  Dit is de breakdownschets van de detail pagina.
+
 
   #### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">

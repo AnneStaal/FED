@@ -115,7 +115,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Anne                | Stiene                | Dylan             | Dylan             | Kasper           |
+  | Anne                | Stiene                | Dylan             | Nicha             | Kasper           |
   | ---                 | ---                   | ---               | ---               | ---              |
   | Dropdown menu       | Titel omdraaien       | Hamburger menu    | en dan ik dat     | en dan ik dat    |
   | Button disablen     | ronddraaiend grid     | Custom properties | dit wil ik zeker  | dit wil ik zeker |

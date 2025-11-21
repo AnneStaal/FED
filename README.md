@@ -115,11 +115,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Anne                | Stiene                | Dylan             | Dylan             | Kasper           |
+  | ---                 | ---                   | ---               | ---               | ---              |
+  | Dropdown menu       | Titel omdraaien       | Hamburger menu    | en dan ik dat     | en dan ik dat    |
+  | Button disablen     | ronddraaiend grid     | Custom properties | dit wil ik zeker  | dit wil ik zeker |
+  | Specifiek element   | h2 en button uit grid | ...               | ...               | ...              |
 
 
   ### Verslag van meeting

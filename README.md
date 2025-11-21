@@ -115,11 +115,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Anne                | Stiene                | Dylan             | Nicha             | Kasper           |
-  | ---                 | ---                   | ---               | ---               | ---              |
-  | Dropdown menu       | Titel omdraaien       | Hamburger menu    | en dan ik dat     | en dan ik dat    |
-  | Button disablen     | ronddraaiend grid     | Custom properties | dit wil ik zeker  | dit wil ik zeker |
-  | Specifiek element   | h2 en button uit grid | ...               | ...               | ...              |
+  | Anne                | Stiene                | Dylan             | Nicha                               | Kasper           |
+  | ---                 | ---                   | ---               | ---                                 | ---              |
+  | Dropdown menu       | Titel omdraaien       | Hamburger menu    | aria-label active naar unactive     | en dan ik dat    |
+  | Button disablen     | ronddraaiend grid     | Custom properties | grid netjes maken                   | dit wil ik zeker |
+  | Specifiek element   | h2 en button uit grid |                   |                                     | ...              |
 
 
   ### Verslag van meeting

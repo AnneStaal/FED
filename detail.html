@@ -16,9 +16,31 @@
 
 <body>
 	<header>
-		<h1>Howdy FED2526</h1>
-
-		<script defer src="scripts/script.js"></script>
+		<a href="#" aria-label="Goodreads Awards stemmen"><img src="/images/goodreads_awards.jpg" alt="afbeelding met tekst dat je kan stemmen voor de goodreads choice awards nominees"></a>
+		<section> <!-- toch bah -Sanne. (moet het met grid gaan doen) -->
+			<form action="search">
+				<input type="text" placeholder="Search books">
+				<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+			</form>
+			<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
+		<!--dit is een inklap menu-->
+			<nav>
+				<button>
+					<img src="images/profielfoto.jpg" alt="profilepicture form user">
+				</button>
+				<ul>
+					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
+      				<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
+      				<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
+      				<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
+				</ul>
+			</nav>
+		</section>
+		<ul>
+			<li><a href="index.html"> My Books</a></li>
+			<li><a href="#">Browse</a></li>
+			<li><a href="#">Community</a></li>
+		</ul>
 	</header>
 	<main>
 
@@ -26,6 +48,8 @@
 	<footer>
 		
 	</footer>
+    <script defer src="scripts/algemeen.js"></script>
+	<script defer src="scripts/details-boek.js"></script>
 </body>
 	
 </html>

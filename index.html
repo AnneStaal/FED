@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Anne Staal">
@@ -14,16 +14,84 @@
 </head>
 
 <body>
-	<header>
-		<h1>Howdy FED2526</h1>
-
-		<script defer src="scripts/script.js"></script>
+	<header> 
+		<a href="#" aria-label="Goodreads Awards stemmen"><img src="/images/goodreads_awards.jpg" alt="afbeelding met tekst dat je kan stemmen voor de goodreads choice awards nominees"></a>
+		<section> <!-- toch bah -Sanne. (moet het met grid gaan doen) -->
+			<form action="search">
+				<input type="text" placeholder="Search books">
+				<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+			</form>
+			<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
+		<!--dit is een inklap menu-->
+			<nav>
+				<button>
+					<img src="images/profielfoto.jpg" alt="profilepicture form user"> 
+					<!--Deze moet als die groter is niet meer een button zijn-->
+				</button>
+				<ul>
+					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
+      				<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
+      				<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
+      				<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
+				</ul>
+			</nav>
+		</section>
+		<ul>
+			<li><a href="index.html"> My Books</a></li>
+			<li><a href="#">Browse</a></li> <!--Dropdown menu, hoe??-->
+			<li><a href="#">Community</a></li>
+		</ul>
 	</header>
 	<main>
+		<h1><a href="index.html">My Books</a></h1>
+		<form action="search">
+			<input type="text" placeholder="Search books">
+			<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+		</form>
+		<ul>
+			<li><a href="#" aria-label="Batch Edit">Batch Edit</a></li>
+			<li><a href="#" aria-label="Settings">Settings</a></li>
+			<li><a href="#" aria-label="Stats">Stats</a></li>
+			<li><a href="#" aria-label="Print">Print</a></li>
+			<li>|</li>
+			<li><a href="#"><img src="images/boekenlijst.png" alt="knop waardoor je de boeken als lijst ziet"></a></li>
+			<li><a href="index.html"><img src="images/boekengrid.png" alt="knop waardoor je de boeken als grid ziet"></a></li>
+		</ul>
+		<p>Bookshelves</p>
+		<a href="index.html">All (1171)</a>
+		<a href="#">Want to read (1014)</a>
+		<a href="#">Currently Reading (3)</a>
+		<a href="#">Read (129)</a>
+		<hr>
+		<a href="#">Kindle (142)</a>
+		<a href="#">Physical-tbr (28)</a>
+		
+		<a href="#">Add shelf</a>
+		<!--Hier moet nog een element onder maar weet niet hoe ik dat moet doen zonder div, als je op knop drukt komt er een form. -->
+		<hr>
+		<p>Your reading activity</p>
+		<a href="#">Review Drafts</a>
+		<a href="#">Kindle Notes & Highlights</a>
+		<a href="#">Reading Challenge</a>
+		<a href="#">Year in Books</a>
+		<a href="#">Reading stats</a>
 
+		<br>
+		<p>Add books</p>
+		<a href="#">Recommendations</a>
+		<a href="#">Explore</a>
+
+		<br>
+		<p>Tools</p>
+		<a href="#">Find duplicates</a>
+		<a href="#">Widgets</a>
+		<a href="#">Import and export</a>
 	</main>
 	<footer>
-		
+
 	</footer>
+	<!--Javascript bestanden-->
+	<script defer src="scripts/algemeen.js"></script>
+	<script defer src="scripts/my-books.js"></script>
 </body>
 </html>

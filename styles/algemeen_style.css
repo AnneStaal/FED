@@ -26,6 +26,136 @@
 /****************/
 /* JOUW STYLING */
 /****************/
+/****************/
+/* Header menu  */
+/****************/
+header{
+  	position:sticky;
+  	top:0;
+}
 
-/* jouw code */
+header section {
+  	display:flex;
+  	justify-content: space-between;
+  	align-items:center;
+}
 
+
+nav  {
+	flex-direction: row;
+}
+
+nav ul {
+	display: flex;
+	gap:1em;
+	list-style: none;
+	background-color: #faf8f6;
+}
+
+nav ul img{
+	width: 2em;
+}
+
+nav button img{
+	border-radius: 5em;
+}
+
+/* MENU BUTTON */
+nav button {
+  position: relative;
+  z-index:1;
+  
+}
+
+/* als menu open is */
+nav.is-open button img {
+  content:url("https://assets.codepen.io/274456/ui-icon-cross.svg");
+  
+}
+
+
+
+/* Menu rechts */
+nav ul { 
+  position:fixed;
+  /*top:0;
+  bottom:0;
+  left:0;
+  right:0;*/
+  inset:0;
+  
+  translate: 100% 0;
+  transition: 1s;
+  
+}
+
+/* als menu open is */
+section.is-open ul {
+  translate:50% 0;
+}
+
+
+
+/****************************************************************/
+/* styling voor de header als de browser minimaal 38em breed is */
+/****************************************************************/
+@media (min-width:38em) {
+  nav {
+    /* JOUW CODE HIER - stap 8 */
+    order:0;
+    
+  }
+
+  nav button{
+	display: none;
+  }
+  
+  nav ul {
+    /* JOUW CODE HIER - stap 7 */
+    position: static;
+    translate:0 0;
+    padding: 0;
+    background:none;
+  }
+  
+  nav li {
+    /* JOUW CODE HIER - stap 9 */
+    flex-basis:0;
+    flex-grow:0;
+    
+  }
+  
+  nav a {
+    /* JOUW CODE HIER - stap 10 */
+    border:none;
+    flex-direction:column;
+  }
+  
+  header > a:last-of-type {
+    /* JOUW CODE HIER - stap 10 */
+        flex-direction:column;
+    
+  }
+}
+
+
+
+/****************************************************************/
+/* styling voor de header als de browser minimaal 57em breed is */
+/****************************************************************/
+@media (min-width:54em) {
+  header > a:last-of-type,
+  nav a {
+    /* JOUW CODE HIER - stap 11 */
+        flex-direction:row;
+    
+  }
+}
+
+/******************/
+/* Main elementen */
+/******************/
+h1 a {
+	
+	text-decoration: none;
+}

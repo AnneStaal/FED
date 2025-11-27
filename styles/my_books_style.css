@@ -1,0 +1,47 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#faf8f6;
+    --text-LatoRegular: "LatoRegular";
+	--text-LatoBold: "LatoBold";
+	--text-LatoItalic:"LatoItalic";
+	--text-MerriweatherRegular: "MerriweatherRegular";
+	--text-MerriweatherBold:"MerriweatherBold";
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+main ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main ul:nth-of-type(2) img{
+    width: 5em;
+}
+
+main a{
+    text-decoration: none;
+}

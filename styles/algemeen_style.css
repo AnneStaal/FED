@@ -14,11 +14,47 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	color-scheme:light dark;
+	/* kleur */
+	--color-nav-text:#38213A;
+	--color-background:#faf8f6;
+	--color-links: #00635d;
+	/* tekst */
+	--text-LatoRegular: "LatoRegular";
+	--text-LatoBold: "LatoBold";
+	--text-LatoItalic:"LatoItalic";
+	--text-MerriweatherRegular: "MerriweatherRegular";
+	--text-MerriweatherBold:"MerriweatherBold";
 }
 
+
+/*********************/
+/* 		 Fonts 		 */
+/*********************/
+@font-face {
+	font-family:"LatoRegular" ;
+	src: url(../fonts/LatoLatin-Regular-1c0bbd257c304f0c439ffca5188bf64d.woff2);
+}
+
+@font-face {
+	font-family:"LatoBold" ;
+	src: url(../fonts/LatoLatin-Bold-68ef13b1d5b140f6454beaf8620f0d00.woff2);
+}
+
+@font-face {
+	font-family:"LatoItalic" ;
+	src: url(../fonts/LatoLatin-Italic-3c16c00fcdb07eb96a6bf4eefa26d1f9.woff2);
+}
+
+@font-face {
+	font-family:"MerriweatherRegular" ;
+	src: url(../fonts/merriweather-regular-gr-01abdd2b4e6be250f29285f7248e978d.woff2)
+}
+
+@font-face {
+	font-family:"MerriweatherBold" ;
+	src: url(../fonts/merriweather-bold-gr-97a99a0fdb5f796fd06d1a1592c6b9fc.woff2);
+}
 
 
 
@@ -26,19 +62,97 @@
 /****************/
 /* JOUW STYLING */
 /****************/
+body {
+	margin:0;
+	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1{
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+	color:var(--color-links);
+}
+
+main{
+	margin: 0 .5em;
+}
+
 /****************/
 /* Header menu  */
 /****************/
 header{
   	position:sticky;
   	top:0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	grid-template-rows: 2em repeat(2, 1fr);
+
+	background-color: var(--color-background);
+	/* display:flex;
+  	justify-content: space-between;
+  	align-items:center; */
 }
 
-header section {
-  	display:flex;
-  	justify-content: space-between;
+header > ul {
+	list-style-type:"";
+	display: flex;
+	gap: 1em;
+	justify-content: space-evenly;
   	align-items:center;
 }
+
+header > a img {
+	height: 2em;
+	justify-content: center;
+}
+
+/* Grid voor de header */
+header > a {
+	height: 2em;
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+header > form{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+header a:nth-of-type(2){
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: flex;
+}
+header nav{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: flex;
+	justify-content: flex-end;
+}
+header > ul{
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+	margin: 0;
+	padding: 0;
+	color:var(--color-nav-text);
+}
+
+
+header > ul a{
+	color:var(--color-nav-text);
+	text-decoration-line: none;
+	font-size: 1em;
+}
+
 
 
 nav  {
@@ -48,8 +162,8 @@ nav  {
 nav ul {
 	display: flex;
 	gap:1em;
-	list-style: none;
-	background-color: #faf8f6;
+	list-style-type:"";
+	background-color: var(--color-background);
 }
 
 nav ul img{
@@ -57,14 +171,18 @@ nav ul img{
 }
 
 nav button img{
+	width: 3em;
 	border-radius: 5em;
+	display: block;
 }
 
 /* MENU BUTTON */
 nav button {
   position: relative;
   z-index:1;
-  
+  appearance: none;
+  border-color: transparent;
+  background: none;
 }
 
 /* als menu open is */
@@ -72,8 +190,6 @@ nav.is-open button img {
   content:url("https://assets.codepen.io/274456/ui-icon-cross.svg");
   
 }
-
-
 
 /* Menu rechts */
 nav ul { 
@@ -90,7 +206,7 @@ nav ul {
 }
 
 /* als menu open is */
-section.is-open ul {
+header.is-open  ul:nth-of-type(1){
   translate:50% 0;
 }
 
@@ -102,12 +218,14 @@ section.is-open ul {
 @media (min-width:38em) {
   nav {
     /* JOUW CODE HIER - stap 8 */
-    order:0;
+    display: flex;
+	gap: 1em;
+	order:0;
     
   }
 
   nav button{
-	display: none;
+	padding:0;
   }
   
   nav ul {
@@ -138,24 +256,39 @@ section.is-open ul {
   }
 }
 
-
-
 /****************************************************************/
 /* styling voor de header als de browser minimaal 57em breed is */
 /****************************************************************/
 @media (min-width:54em) {
   header > a:last-of-type,
-  nav a {
+nav a {
     /* JOUW CODE HIER - stap 11 */
         flex-direction:row;
     
   }
 }
 
+
 /******************/
 /* Main elementen */
 /******************/
 h1 a {
-	
 	text-decoration: none;
+}
+
+
+/******************/
+/* 		Footer 	  */
+/******************/
+footer{
+	background-color: var(--color-background);
+}
+
+footer ul{
+	list-style-type:"";
+}
+
+footer ul:nth-of-type(3){
+	display: flex;
+	gap: 1em;
 }

@@ -78,11 +78,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
 
   #### dynamisch deel (bijv menu): 
+  Hier is mijn breakdownschets van de verschillende dynamische elementen van de website GoodReads.
   <img src="readme-images/menu.jpg" width="250px" alt="breakdown van het secundaire menu als je op de profielfoto klikt">
   <img src="readme-images/hoofdmenu.jpg" width="250px" alt="breakdown van het hoofdmenu">
   <img src="readme-images/hoofdmenu_groot_scherm.jpg" width="250px" alt="breakdown van het hoofdmenu op groot scherm">
 
   #### wellicht nog een dynamisch deel (bijv filter): 
+  Hier is mijn breakdownschets van de uitleg die naar voren komt bij een boek als je erover heen hovert.
   <img src="readme-images/extra_uitleg_boek.jpg" width="375px" alt="breakdown van de extra uitleg die je krijgt bij een boek als je hovert">
 
   ### Boek in detail pagina:
@@ -95,10 +97,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  #### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  Hier is mijn breakdownschets van de extra informatie wanneer die is uitgeklapt.
+  <img src="readme-images/breakdownschets_book_detail_extra.jpg" width="375px" alt="breakdown van een extra informatie deel wanneer die is uitgeklapt">
 </details>
 
 

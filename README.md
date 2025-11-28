@@ -78,10 +78,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
 
   #### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="250px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/menu.jpg" width="250px" alt="breakdown van het secundaire menu als je op de profielfoto klikt">
+  <img src="readme-images/hoofdmenu.jpg" width="250px" alt="breakdown van het hoofdmenu">
+  <img src="readme-images/hoofdmenu_groot_scherm.jpg" width="250px" alt="breakdown van het hoofdmenu op groot scherm">
 
   #### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/extra_uitleg_boek.jpg" width="375px" alt="breakdown van de extra uitleg die je krijgt bij een boek als je hovert">
 
   ### Boek in detail pagina:
   #### De hele pagina: 
@@ -124,11 +126,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+ - Grid-column: 1 -1;
+ - Krijg je de hele breedte van je grid
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+ - Emmet cheat sheet
+
+ - List-style-type:””;
+    Hiermee blijft het een list voor de screen reader
+    Met list-type:none; is het geen lijst meer.
+
+ - Anchor-name in moet in gewone ul
+ - Postion-anchor is waar de knoppen voor de carousel aan hangt.
+
+ - Voor geen animatie
+    @media (prefers-reduced-motion:no-preference){
+	    scroll-behavior: smooth;
+    }
+
+ - Aspect-ratio:1/1;
+ 	  |-> maakt het een vierkantje
+
+ - Als in url live staat kan je er pen van maken dan kan je daar de code van zien
+
+ - Active state met chrome://flags
+
+ - Voor border moet je transparent doen voor high-contrast
 
 </details>
 
@@ -148,11 +170,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Anne                      | Stiene              | Dylan               | Kasper                            | Nicha          |
+  | ---                       | ---                 | ---                 | ---                               | ---            |
+  | ul zowel verticaal        | grid is kapot       | grid kaartjes       | Afsnijden van svg door font-size  |                |
+  | als horizontaal plaatsen  |                     | afbeelding scaling  | SVG/Image in content zetten       |                |
+  |                           |                     |                     | Kaart in section                  |                |
 
 
   ### Verslag van meeting

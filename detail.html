@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 	
 <head>
 	<meta charset="UTF-8">
@@ -17,31 +17,82 @@
 <body>
 	<header> 
 		<a href="#" aria-label="Goodreads Awards stemmen"><img src="/images/goodreads_award_klein.jpg" alt="afbeelding met tekst dat je kan stemmen voor de goodreads choice awards nominees"></a>
-		<section> <!-- toch bah -Sanne. (moet het met grid gaan doen) -->
+		
 			<form action="search">
 				<input type="text" placeholder="Search books">
 				<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
 			</form>
 			<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
-		<!--dit is een inklap menu-->
-			<nav>
-				<button>
-					<img src="images/profielfoto.jpg" alt="profilepicture form user"> 
-					<!--Deze moet als die groter is niet meer een button zijn-->
-				</button>
+		
+			<!--dit is een inklap menu-->
+			<nav hidden>
+				<ul>
+					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
+					<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
+					<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
+					<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
+				</ul>
+			</nav>
+
+		<button>
+			<img src="images/profielfoto.jpg" alt="profilepicture form user"> 
+				<!--Deze moet als die groter is niet meer een button zijn-->
+		</button>
+
+		<nav>
 				<ul>
 					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
       				<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
       				<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
       				<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
 				</ul>
-			</nav>
-		</section>
+
+				<ul>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Friends</a></li>
+					<li><a href="#">Groups</a></li>
+					<li><a href="#">Discussions</a></li>
+					<li><a href="#">Comments</a></li>
+					<li><a href="#">Reading Challenge</a></li>
+					<li><a href="#">Kindle Notes & Highlights</a></li>
+					<li><a href="#">Quotes</a></li>
+					<li><a href="#">Favorite genres</a></li>
+					<li><a href="#">Friends' Recommendations</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Account settings</a></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Sign out</a></li>
+				</ul>
+		</nav>
+
 		<ul>
 			<li><a href="#"> Home</a></li>
 			<li><a href="index.html"> My Books</a></li>
-			<li><a href="#">Browse</a></li> <!--Dropdown menu, hoe??-->
-			<li><a href="#">Community</a></li>
+			<li><details>
+				<summary>Browse</summary>
+				<ul>
+					<li><a href="#">Recommendations</a></li>
+					<li><a href="#">Choice Awards</a></li>
+					<li><a href="#">Genres</a></li>
+					<li><a href="#">Giveaways</a></li>
+					<li><a href="#">New Releases</a></li>
+					<li><a href="#">Lists</a></li>
+					<li><a href="#">Explore</a></li>
+					<li><a href="#">News & Interviews</a></li>
+				</ul>
+			</details>
+			</li> <!--Dropdown menu, hoe??-->
+			<li><details>
+				<summary>Community</summary>
+				<ul>
+					<li><a href="#">Groups</a></li>
+					<li><a href="#">Discussions</a></li>
+					<li><a href="#">Quotes</a></li>
+					<li><a href="#">Ask the Author</a></li>
+					<li><a href="#">People</a></li>
+				</ul>
+			</details></li>
 		</ul>
 	</header>
 

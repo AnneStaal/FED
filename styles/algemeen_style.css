@@ -1,6 +1,6 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+/*****************************************************************************************/
+/* 											CSS REMEDY 							   	 */
+/*****************************************************************************************/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
@@ -10,13 +10,16 @@
 
 
 
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
+/*****************************************************************************************/
+/* 											CUSTOM PROPERTIES 						   	 */
+/*****************************************************************************************/
 :root {
 	color-scheme:light dark;
 	/* kleur */
 	--color-nav-text:#38213A;
+	--color-previous-text: #181818;
+	--color-nav-links:#333333;
+	--color-footer-text:#1e1915;
 	--color-background:#faf8f6;
 	--color-links: #00635d;
 	/* tekst */
@@ -28,9 +31,9 @@
 }
 
 
-/*********************/
-/* 		 Fonts 		 */
-/*********************/
+/*****************************************************************************************/
+/* 											Fonts		 							   	 */
+/*****************************************************************************************/
 @font-face {
 	font-family:"LatoRegular" ;
 	src: url(../fonts/LatoLatin-Regular-1c0bbd257c304f0c439ffca5188bf64d.woff2);
@@ -59,9 +62,9 @@
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/*****************************************************************************************/
+/* 											Jouw Styling 							   	 */
+/*****************************************************************************************/
 body {
 	margin:0;
 	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -79,9 +82,11 @@ main{
 	margin: 0 .5em;
 }
 
-/****************/
-/* Header menu  */
-/****************/
+
+
+/*****************************************************************************************/
+/* 											Header menu 							   	 */
+/*****************************************************************************************/
 header{
   	position:sticky;
   	top:0;
@@ -114,26 +119,45 @@ header > a {
 	grid-column-start: 1;
 	grid-column-end: -1;
 }
-header > form{
+
+header button:nth-of-type(1){
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
+
+	position: relative;
+	z-index:1;
+	appearance: none;
+	border-color: transparent;
+	background: none;
+
+	justify-self:flex-start;
+	margin: 0 0 0 1em;
 }
+
+header button:nth-of-type(1) img{
+	width: 1.4em;
+}
+
 header a:nth-of-type(2){
 	grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3.1em;
 }
-header nav{
+
+header nav:nth-of-type(2){
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	display: flex;
-	justify-content: flex-end;
+	/* justify-content: flex-end; */
 }
 header > ul{
 	grid-column-start: 1;
@@ -154,61 +178,87 @@ header > ul a{
 }
 
 
-
-nav  {
+header nav:nth-of-type(2) {
 	flex-direction: row;
+
+	background-color: var(--color-background);
+
+	position:fixed;
+	/*top:0;
+	bottom:0;
+	left:0;
+	right:0;*/
+	/* inset:0; */
+	right:0;
+	top:0;
+	bottom:0;
+	width:80%;
+
+	translate: 100% 0;
+	transition: 1s;
+
+	display: flex;
+	flex-direction: column;
+  
 }
 
-nav ul {
+/* als menu open is */
+header.is-open  nav:nth-of-type(2) {
+  translate:0% 0;
+}
+
+header nav:nth-of-type(2) ul{
+	list-style-type: none;
+	padding: 0 1.8em;
+}
+
+header nav:nth-of-type(2) ul a{
+	color: var(--color-nav-links);
+	text-decoration-line: none;
+}
+
+
+header nav:nth-of-type(2) ul:nth-of-type(1) {
 	display: flex;
 	gap:1em;
 	list-style-type:"";
-	background-color: var(--color-background);
 }
 
-nav ul img{
+header nav:nth-of-type(2) ul:nth-of-type(1) img{
 	width: 2em;
 }
 
-nav button img{
-	width: 3em;
-	border-radius: 5em;
-	display: block;
+header nav:nth-of-type(2) ul:nth-of-type(2){
+	position: fixed;
+	top: 6em;
 }
 
+header nav:nth-of-type(2) ul:nth-of-type(3){
+	position: fixed;
+	top: 19em;
+	
+}
+
+
 /* MENU BUTTON */
-nav button {
+header button:nth-of-type(2) {
   position: relative;
   z-index:1;
   appearance: none;
   border-color: transparent;
   background: none;
+
+  justify-self: end;
+  margin: 0 1em 0 0;
 }
 
-/* als menu open is */
-nav.is-open button img {
-  content:url("https://assets.codepen.io/274456/ui-icon-cross.svg");
-  
+
+header button:nth-of-type(2) img{
+	width: 3em;
+	border-radius: 5em;
+	display: block;
 }
 
-/* Menu rechts */
-nav ul { 
-  position:fixed;
-  /*top:0;
-  bottom:0;
-  left:0;
-  right:0;*/
-  inset:0;
-  
-  translate: 100% 0;
-  transition: 1s;
-  
-}
-
-/* als menu open is */
-header.is-open  ul:nth-of-type(1){
-  translate:50% 0;
-}
 
 
 
@@ -216,19 +266,18 @@ header.is-open  ul:nth-of-type(1){
 /* styling voor de header als de browser minimaal 38em breed is */
 /****************************************************************/
 @media (min-width:38em) {
-  nav {
+  nav:nth-of-type(1) {
+	display:block;
     /* JOUW CODE HIER - stap 8 */
-    display: flex;
-	gap: 1em;
-	order:0;
-    
+	ul {
+		display: flex;
+		gap: 1em;
+		order:0;
+		list-style-type:"";
+	}
   }
 
-  nav button{
-	padding:0;
-  }
-  
-  nav ul {
+  nav:nth-of-type(2) {
     /* JOUW CODE HIER - stap 7 */
     position: static;
     translate:0 0;
@@ -236,24 +285,16 @@ header.is-open  ul:nth-of-type(1){
     background:none;
   }
   
-  nav li {
-    /* JOUW CODE HIER - stap 9 */
-    flex-basis:0;
-    flex-grow:0;
-    
+  header nav:nth-of-type(2) ul:nth-of-type(1) {
+	display:none;
   }
-  
-  nav a {
-    /* JOUW CODE HIER - stap 10 */
-    border:none;
-    flex-direction:column;
+
+  header{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); 
+	grid-template-rows: 2em repeat(2, 1fr);
   }
-  
-  header > a:last-of-type {
-    /* JOUW CODE HIER - stap 10 */
-        flex-direction:column;
-    
-  }
+
 }
 
 /****************************************************************/
@@ -269,26 +310,47 @@ nav a {
 }
 
 
-/******************/
-/* Main elementen */
-/******************/
+
+
+
+/*****************************************************************************************/
+/* 											Main elementen 							   	 */
+/*****************************************************************************************/
 h1 a {
 	text-decoration: none;
 }
 
 
-/******************/
-/* 		Footer 	  */
-/******************/
+
+
+/*****************************************************************************************/
+/* 											Footer		 							   	 */
+/*****************************************************************************************/
 footer{
 	background-color: var(--color-background);
+	margin: 0 auto;
+	padding:2em .75em;
+	color: var(--color-footer-text);
 }
 
 footer ul{
 	list-style-type:"";
 }
 
+footer ul a{
+	color: var(--color-footer-text);
+	text-decoration-line: none;
+}
+
 footer ul:nth-of-type(3){
 	display: flex;
 	gap: 1em;
+}
+
+footer ul:nth-of-type(3) img{
+	height: 1.8em;
+}
+
+footer img{
+    height: 2.8em;
 }

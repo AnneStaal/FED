@@ -1,47 +1,179 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+/*****************************************************************************************/
+/* 											CSS REMEDY 							   	 */
+/*****************************************************************************************/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
+/*****************************************************************************************/
+/* 											Jouw Styling 							   	 */
+/*****************************************************************************************/
 
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#faf8f6;
-    --text-LatoRegular: "LatoRegular";
-	--text-LatoBold: "LatoBold";
-	--text-LatoItalic:"LatoItalic";
-	--text-MerriweatherRegular: "MerriweatherRegular";
-	--text-MerriweatherBold:"MerriweatherBold";
-}
-
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-main ul{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-main ul:nth-of-type(2) img{
-    width: 5em;
+/*****************************************************************************************/
+/* 											Main elementen 							   	 */
+/*****************************************************************************************/
+main{
+    display: grid;
+    grid-template-columns: 1fr 10em repeat(3, 1fr);
+    grid-template-rows: 2em 15% 3em repeat(3, 15%)  2em 2em;
+    /* grid-column-gap: 0px;
+    grid-row-gap: 0px; */
 }
 
 main a{
-    text-decoration: none;
+    text-decoration-line: none;
 }
+
+main h1{
+    font-size: 1.3em;
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+main ul{
+    list-style-type: none;
+    display: flex; 
+    margin: 0;   
+    padding: 0;
+}
+
+main form:nth-of-type(1) {
+    grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+/* nummer 1 naast zoek */
+main ul:nth-of-type(1){
+    gap: 1em;
+    grid-column-start: 4;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+main ul:nth-of-type(1) img{
+    width: 1.5em;
+}
+
+/* nummer 2 bookshelves */
+main ul:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+/* add to shelf button */
+main > button{
+    width: 6em;
+    height: 2em;
+
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+/* nummer 3 reading activity */
+main ul:nth-of-type(3){
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+/* nummer 4 add books */
+main ul:nth-of-type(4){
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 5;
+	grid-row-end: 6;
+}
+
+/* nummer 5 tools */
+main ul:nth-of-type(5){
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+
+/* nummer 6 boeken */
+main ul:nth-of-type(6){
+    grid-column-start: 2;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 7em);
+    grid-template-rows: repeat(4, 9.6em);
+    gap: 1em;
+}
+
+main ul:nth-of-type(6) li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul:nth-of-type(6) img{
+    width: 6em;
+}
+
+/* forms over boeken grid */
+main form:nth-of-type(2){
+    grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+main form:nth-of-type(3){
+    grid-column-start: 3;
+	grid-column-end: -1;
+	grid-row-start: 7;
+	grid-row-end: 8;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* nummer 7 previous/next */
+main ul:nth-of-type(7){
+    grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 8;
+	grid-row-end: 9;
+
+    display: flex;
+    flex-direction: row;
+    gap: .2em;
+    font-size: .9em;
+}
+
+main ul:nth-of-type(7) li:nth-of-type(1) a{
+    color: var(--color-previous-text);
+}
+
+main ul:nth-of-type(7) li:nth-of-type(2) a{
+    color: var(--color-previous-text);
+}
+
+/*****************************************************************************************/
+/* 											Footer		 							   	 */
+/*****************************************************************************************/

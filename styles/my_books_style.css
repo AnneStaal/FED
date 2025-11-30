@@ -15,7 +15,7 @@
 main{
     display: grid;
     grid-template-columns: 1fr 10em repeat(3, 1fr);
-    grid-template-rows: 2em 15% 3em repeat(3, 15%)  2em 2em;
+    grid-template-rows: 2em 32% 3em 25% 12% 20% 2em 2em;
     /* grid-column-gap: 0px;
     grid-row-gap: 0px; */
 }
@@ -39,11 +39,28 @@ main ul{
     padding: 0;
 }
 
+main ul li h2{
+    font-size: .8em;
+    font-family: var(--text-LatoBold);
+}
+
+main ul li a{
+    font-size: .8em;
+}
+
 main form:nth-of-type(1) {
     grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 1;
 	grid-row-end: 2;
+}
+
+main form:nth-of-type(1) input{
+    font-size: .6em;
+    border: var(--color-inputfield) 1px solid;
+    border-radius: .2em;
+    width: 9.7em;
+    padding: .25em 1.8em .25em .3em;
 }
 
 /* nummer 1 naast zoek */
@@ -53,8 +70,15 @@ main ul:nth-of-type(1){
 	grid-column-end: 6;
 	grid-row-start: 1;
 	grid-row-end: 2;
-}
 
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: .75em;
+}
+main ul:nth-of-type(1) li{
+    display: flex;
+    flex-wrap: nowrap;
+}
 main ul:nth-of-type(1) img{
     width: 1.5em;
 }
@@ -123,7 +147,7 @@ main ul:nth-of-type(6){
     display: grid;
     grid-template-columns: repeat(3, 7em);
     grid-template-rows: repeat(4, 9.6em);
-    gap: 1em;
+    /* gap: 1em; */
 }
 
 main ul:nth-of-type(6) li{
@@ -143,6 +167,12 @@ main form:nth-of-type(2){
 	grid-row-start: 7;
 	grid-row-end: 8;
 }
+main form:nth-of-type(2) label{
+    font-size: .9em;
+    color: var(--color-greytext);
+}
+
+
 main form:nth-of-type(3){
     grid-column-start: 3;
 	grid-column-end: -1;
@@ -151,6 +181,10 @@ main form:nth-of-type(3){
 
     display: flex;
     flex-direction: row;
+}
+main form:nth-of-type(3) label{
+    font-size: .9em;
+    color: var(--color-greytext);
 }
 
 /* nummer 7 previous/next */

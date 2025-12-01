@@ -271,13 +271,14 @@ header button:nth-of-type(2) img{
   nav:nth-of-type(1) {
 	display:block;
     /* JOUW CODE HIER - stap 8 */
+	
 	ul {
 		display: flex;
 		gap: 1em;
 		order:0;
 		list-style-type:"";
 	}
-  }
+	}
 
   nav:nth-of-type(2) {
     /* JOUW CODE HIER - stap 7 */
@@ -330,7 +331,7 @@ h1 a {
 /*****************************************************************************************/
 footer{
 	background-color: var(--color-background);
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	padding:2em .75em;
 	color: var(--color-footer-text);
 }
@@ -351,8 +352,11 @@ footer ul:nth-of-type(3){
 
 footer ul:nth-of-type(3) img{
 	height: 1.8em;
+
 }
 
 footer img{
     height: 2.8em;
+	display: flex;
+	flex-direction: column;
 }

@@ -14,8 +14,8 @@
 /*****************************************************************************************/
 main{
     display: grid;
-    grid-template-columns: 1fr 10em repeat(3, 1fr);
-    grid-template-rows: 2em 32% 3em 25% 12% 23% 2em 2em;
+    grid-template-columns:  9.5em 9.5em repeat(3, 1fr);
+    grid-template-rows: 2em 1.5em .6fr 2em .6fr 12% 23% 2em 2em;
 }
 
 main a{
@@ -28,6 +28,9 @@ main h1{
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 2;
+
+    display: flex;
+    align-items: center;
 }
 
 main ul{
@@ -46,22 +49,34 @@ main ul li a{
     font-size: .8em;
 }
 
+/* search button */
 main form:nth-of-type(1) {
-    grid-column-start: 3;
-	grid-column-end: 4;
+    grid-column-start: 2;
+	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
 
     display: flex;
+    justify-content: flex-end;
     flex-direction: row;
+
+    height: 1.5em;
 }
 
 main form:nth-of-type(1) input{
     font-size: .6em;
-    border: var(--color-inputfield) 1px solid;
-    border-radius: .2em;
-    width: 9.7em;
-    padding: .25em 1.8em .25em .3em;
+    border: 1px solid var(--color-greytext);
+    width: 10em;
+    padding: .25em .5em .25em .5em;
+    border-radius: .5em;
+}
+
+main form:nth-of-type(1) button {
+    appearance: none;
+    border-color: transparent;
+    background: none;
+    /* position: absolute;
+    right: 22em; */
 }
 
 main form:nth-of-type(1) button img{
@@ -71,12 +86,14 @@ main form:nth-of-type(1) button img{
 /* nummer 1 naast zoek */
 main ul:nth-of-type(1){
     gap: 1em;
-    grid-column-start: 4;
+    grid-column-start: 3;
 	grid-column-end: 6;
 	grid-row-start: 1;
 	grid-row-end: 2;
 
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex-wrap: nowrap;
     font-size: .75em;
 }
@@ -88,8 +105,31 @@ main ul:nth-of-type(1) img{
     width: 1.5em;
 }
 
-/* nummer 2 bookshelves */
+/* nummer 2 previous/next */
 main ul:nth-of-type(2){
+    grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: .2em;
+    font-size: .9em;
+}
+
+main ul:nth-of-type(2) li:nth-of-type(1) a{
+    color: var(--color-previous-text);
+}
+
+main ul:nth-of-type(2) li:nth-of-type(2) a{
+    color: var(--color-previous-text);
+}
+
+/* nummer 3 bookshelves */
+main ul:nth-of-type(3){
     display: flex;
     flex-direction: column;
     grid-column-start: 1;
@@ -97,35 +137,25 @@ main ul:nth-of-type(2){
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
-main ul:nth-of-type(2) li{
-    display: flex;
-    flex-wrap: nowrap;
-
-}
 
 /* add to shelf button */
-main > button{
+main > button {
     width: 6em;
     height: 2em;
 
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 3;
-	grid-row-end: 4;
-}
-
-/* nummer 3 reading activity */
-main ul:nth-of-type(3){
-    display: flex;
-    flex-direction: column;
-
-    grid-column-start: 1;
-	grid-column-end: 2;
 	grid-row-start: 4;
 	grid-row-end: 5;
+
+    border: 1px solid var(--color-button-border);
+    border-radius: .4em;
+    background-color: var(--color-button);
+    padding: .25em .8em;
+    font-size: .7em;
 }
 
-/* nummer 4 add books */
+/* nummer 4 reading activity */
 main ul:nth-of-type(4){
     display: flex;
     flex-direction: column;
@@ -136,7 +166,7 @@ main ul:nth-of-type(4){
 	grid-row-end: 6;
 }
 
-/* nummer 5 tools */
+/* nummer 5 add books */
 main ul:nth-of-type(5){
     display: flex;
     flex-direction: column;
@@ -147,76 +177,150 @@ main ul:nth-of-type(5){
 	grid-row-end: 7;
 }
 
-/* nummer 6 boeken */
+/* nummer 6 tools */
 main ul:nth-of-type(6){
+    display: flex;
+    flex-direction: column;
+
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+/* nummer 7 boeken */
+main ul:nth-of-type(7){
     grid-column-start: 2;
 	grid-column-end: -1;
-	grid-row-start: 2;
-	grid-row-end: 7;
+	grid-row-start: 3;
+	grid-row-end: 8;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
 
-main ul:nth-of-type(6) li{
+main ul:nth-of-type(7) li{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main ul:nth-of-type(6) img{
-    width: 9.3em;
+main ul:nth-of-type(7) img{
+    width: 8em;
+    box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.25);
 }
 
 /* forms over boeken grid */
 main form:nth-of-type(2){
     grid-column-start: 2;
 	grid-column-end: 3;
-	grid-row-start: 7;
-	grid-row-end: 8;
+	grid-row-start: 8;
+	grid-row-end: 9;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: .2em;
 }
 main form:nth-of-type(2) label{
-    font-size: .9em;
+    font-size: .8em;
     color: var(--color-greytext);
 }
 
+main form:nth-of-type(2) select{
+    font-size: .9em;
+    color: var(--color-selecttext);
+    height: 1.5em;
+}
 
 main form:nth-of-type(3){
     grid-column-start: 3;
 	grid-column-end: -1;
-	grid-row-start: 7;
-	grid-row-end: 8;
-
-    display: flex;
-    flex-direction: row;
-}
-main form:nth-of-type(3) label{
-    font-size: .9em;
-    color: var(--color-greytext);
-}
-
-/* nummer 7 previous/next */
-main ul:nth-of-type(7){
-    grid-column-start: 2;
-	grid-column-end: 4;
 	grid-row-start: 8;
 	grid-row-end: 9;
 
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: .2em;
+}
+main form:nth-of-type(3) label{
+    font-size: .8em;
+    color: var(--color-greytext);
+}
+
+main form:nth-of-type(3) select{
+    font-size: .9em;
+    color: var(--color-selecttext);
+    height: 1.5em;
+    width: 6em;
+}
+
+/* nummer 8 previous/next */
+main ul:nth-of-type(8){
+    grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 9;
+	grid-row-end: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
     gap: .2em;
     font-size: .9em;
 }
 
-main ul:nth-of-type(7) li:nth-of-type(1) a{
+main ul:nth-of-type(8) li:nth-of-type(1) a{
     color: var(--color-previous-text);
 }
 
-main ul:nth-of-type(7) li:nth-of-type(2) a{
+main ul:nth-of-type(8) li:nth-of-type(2) a{
     color: var(--color-previous-text);
 }
 
 /*****************************************************************************************/
 /* 											Footer		 							   	 */
 /*****************************************************************************************/
+footer > a:nth-of-type(1) {
+	position: absolute;
+	left: 60vw;
+	top: 60em;
+}
+footer > a:nth-of-type(2) {
+	position: absolute;
+	left: 60vw;
+	top: 63em;
+}
+
+footer > p {
+	position: absolute;
+	left: 60vw;
+	top: 73em;
+	font-size: .9em;
+} /* werkt nog niet helemaal */
+
+/*****************************************************************************************/
+/* 											Toegankelijkheid		 					 */
+/*****************************************************************************************/
+body a:hover{
+    text-decoration: underline;
+}
+
+main h1 a:hover{
+    text-decoration: none;
+}
+
+body a:focus{
+    border: 2px solid var(--color-links);
+    border-radius: .5em;
+    padding: .2em;
+}
+
+body a:focus-visible{
+    border: 2px solid var(--color-links);
+}

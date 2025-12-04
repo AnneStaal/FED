@@ -20,10 +20,15 @@
 	--color-previous-text: #181818;
 	--color-nav-links:#333333;
 	--color-greytext:#999999;
+	--color-selecttext:	#696969;
 	--color-footer-text:#1e1915;
 	--color-background:#faf8f6;
 	--color-links: #00635d;
 	--color-inputfield: #DCD6CC;
+	--color-button-border:#D6D0C4;
+	--color-button:#F4F1EA;
+	--color-header-hover:#32362d;
+	--color-wit:#ffffff;
 	/* tekst */
 	--text-LatoRegular: "LatoRegular";
 	--text-LatoBold: "LatoBold";
@@ -97,31 +102,86 @@ header{
 	grid-template-rows: 2em repeat(2, 1fr);
 
 	background-color: var(--color-background);
-	/* display:flex;
-  	justify-content: space-between;
-  	align-items:center; */
 }
 
+
+
+/* Hoofdnavigatie my books, browse, community */
 header > ul {
 	list-style-type:"";
 	display: flex;
-	gap: 1em;
 	justify-content: space-evenly;
   	align-items:center;
+
+	box-shadow: inset .5em 1em 1em rgba(0, 0, 0, 0.5);/* krijg geen schaduw aan de binnenkant*/
+	box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.25);
+}
+header > ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+header > ul details ul {
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+header > ul a{
+	color:var(--color-nav-text);
+	text-decoration-line: none;
+	font-size: 1em;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > ul details ul{
+	display: inline-block;
+} /* werkt niet */
+header > ul li:hover{
+	background-color: var(--color-header-hover);
+	color: var(--color-wit);
+}
+header > ul a:hover{
+	color: var(--color-wit);
+	text-decoration: none;
+}
+
+
+/* reading challenge */
 header > a img {
 	height: 2em;
 	justify-content: center;
 }
 
-/* Grid voor de header */
-header > a {
+header a:nth-of-type(2) img {
+	display: none;
+}
+
+header a:nth-of-type(1) {
 	height: 2em;
 	grid-column-start: 1;
 	grid-column-end: -1;
 }
 
+
+/* logo van goodreads */
+header a:nth-of-type(3){
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	height: 3.1em;
+}
+
+
+/* profiel menu */
 header button:nth-of-type(1){
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -142,24 +202,13 @@ header button:nth-of-type(1) img{
 	width: 1.4em;
 }
 
-header a:nth-of-type(2){
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 3.1em;
-}
-
 header nav:nth-of-type(2){
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 2;
 	grid-row-end: 3;
+
 	display: flex;
-	/* justify-content: flex-end; */
 }
 header > ul{
 	grid-column-start: 1;
@@ -173,24 +222,12 @@ header > ul{
 }
 
 
-header > ul a{
-	color:var(--color-nav-text);
-	text-decoration-line: none;
-	font-size: 1em;
-}
-
-
 header nav:nth-of-type(2) {
 	flex-direction: row;
 
 	background-color: var(--color-background);
 
 	position:fixed;
-	/*top:0;
-	bottom:0;
-	left:0;
-	right:0;*/
-	/* inset:0; */
 	right:0;
 	top:0;
 	bottom:0;
@@ -203,6 +240,28 @@ header nav:nth-of-type(2) {
 	flex-direction: column;
   
 }
+
+/* PROFIELMENU BUTTON */
+header button:nth-of-type(2) {
+	position: relative;
+	z-index:1;
+	appearance: none;
+	border-color: transparent;
+	background: none;
+
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	justify-self: end;
+	margin: 0 1em 0 0;
+}
+header button:nth-of-type(2) img{
+	width: 3em;
+	border-radius: 5em;
+	display: block;
+}
+
 
 /* als menu open is */
 header.is-open  nav:nth-of-type(2) {
@@ -238,65 +297,81 @@ header nav:nth-of-type(2) ul:nth-of-type(2){
 header nav:nth-of-type(2) ul:nth-of-type(3){
 	position: fixed;
 	top: 19em;
-	
 }
-
-
-/* MENU BUTTON */
-header button:nth-of-type(2) {
-  position: relative;
-  z-index:1;
-  appearance: none;
-  border-color: transparent;
-  background: none;
-
-  justify-self: end;
-  margin: 0 1em 0 0;
-}
-
-
-header button:nth-of-type(2) img{
-	width: 3em;
-	border-radius: 5em;
-	display: block;
-}
-
-
-
 
 /****************************************************************/
 /* styling voor de header als de browser minimaal 38em breed is */
 /****************************************************************/
 @media (min-width:38em) {
-  nav:nth-of-type(1) {
-	display:block;
-    /* JOUW CODE HIER - stap 8 */
-	
-	ul {
-		display: flex;
-		gap: 1em;
+  	nav:nth-of-type(1) {
+		display:block;
 		order:0;
+		
+		display: flex;
+		justify-content: flex-end;
+
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+
+	nav:nth-of-type(1) ul{
 		list-style-type:"";
-	}
+		display: flex;
+		flex-direction: row;
+		gap: 1em;
 	}
 
-  nav:nth-of-type(2) {
-    /* JOUW CODE HIER - stap 7 */
-    position: static;
-    translate:0 0;
-    padding: 0;
-    background:none;
-  }
+	header button:nth-of-type(2) {
+		position: relative;
+		z-index:1;
+		appearance: none;
+		border-color: transparent;
+		background: none;
+
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		justify-self: end;
+		margin: 0 1em 0 0;
+	}
+
+  	nav:nth-of-type(2) {
+		position: static;
+		translate:0 0;
+		padding: 0;
+		background:none;
+  	}
   
-  header nav:nth-of-type(2) ul:nth-of-type(1) {
-	display:none;
-  }
+ 	header nav:nth-of-type(2) ul:nth-of-type(1) {
+		display:none;
+  	}
 
-  header{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr); 
-	grid-template-rows: 2em repeat(2, 1fr);
-  }
+  	header{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 4em; 
+		grid-template-rows: 2.7em repeat(2, 1fr);
+ 	}
+
+  	header > a:nth-of-type(1) {
+		display: none;
+ 	}
+
+ /* code voor het verwisselen van reading challenge afbeelding */
+ 	header a:nth-of-type(2) {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+		
+ 	}
+ 	header a:nth-of-type(2) img {
+		display: block;
+		height: 2.7em;
+ 	}
 
 }
 
@@ -305,8 +380,7 @@ header button:nth-of-type(2) img{
 /****************************************************************/
 @media (min-width:54em) {
   header > a:last-of-type,
-nav a {
-    /* JOUW CODE HIER - stap 11 */
+	nav a {
         flex-direction:row;
     
   }
@@ -319,6 +393,10 @@ nav a {
 /*****************************************************************************************/
 /* 											Main elementen 							   	 */
 /*****************************************************************************************/
+main{
+	margin: .5em .5em 0 .5em ;
+}
+
 h1 a {
 	text-decoration: none;
 }
@@ -334,24 +412,33 @@ footer{
 	/* margin: 0 auto; */
 	padding:2em .75em;
 	color: var(--color-footer-text);
+
+}
+
+footer h3{
+	font-size: .9em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 footer ul{
 	list-style-type:"";
+	font-size: .9em;
+	padding: 0 0 0 .5em;
 }
 
 footer ul a{
 	color: var(--color-footer-text);
 	text-decoration-line: none;
+
 }
 
 footer ul:nth-of-type(3){
 	display: flex;
-	gap: 1em;
+	gap: .5em;
 }
 
 footer ul:nth-of-type(3) img{
-	height: 1.8em;
+	height: 2.5em;
 
 }
 
@@ -360,3 +447,8 @@ footer img{
 	display: flex;
 	flex-direction: column;
 }
+
+/*****************************************************************************************/
+/* 								Toegankelijkheid		 							   	 */
+/*****************************************************************************************/
+

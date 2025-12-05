@@ -121,13 +121,6 @@ header > ul li {
     justify-content: center;
     align-items: center;
 }
-
-header > ul details ul {
-	display: flex;
-	flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
 header > ul a{
 	color:var(--color-nav-text);
 	text-decoration-line: none;
@@ -136,9 +129,31 @@ header > ul a{
     justify-content: center;
     align-items: center;
 }
-header > ul details ul{
-	display: inline-block;
-} /* werkt niet */
+
+/*Gedaan met behulp van ai https://chatgpt.com/share/693199ea-1954-800e-b91f-44c77274fbbf */
+/* De dropdown zelf */ 
+header > ul > li > details > ul {
+  list-style: none;
+  margin: 0;
+  padding: 1em 1.25em;
+
+  /* VERPLAATSING — dit maakt hem zoals Goodreads */
+  position: absolute;
+  top: 100%; /* direct onder de summary */
+  left: 0;   /* uitlijnen met de knop */
+
+  width: 100%; /* optioneel: breedte zoals Goodreads */
+
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
+}
+header > ul > li > details > ul > li{
+  display:flex;
+  justify-content:flex-start;
+}
+
+/* acties */
 header > ul li:hover{
 	background-color: var(--color-header-hover);
 	color: var(--color-wit);
@@ -147,6 +162,17 @@ header > ul a:hover{
 	color: var(--color-wit);
 	text-decoration: none;
 }
+header > ul > li > details > ul > li:hover{
+  text-decoration: underline;
+  color: var(--color-nav-links);
+  background-color: var(--color-wit);
+}
+header > ul > li > details > ul > li a:hover{
+  text-decoration: underline;
+  color: var(--color-nav-links);
+  background-color: var(--color-wit);
+}
+
 
 
 /* reading challenge */

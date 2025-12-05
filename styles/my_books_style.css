@@ -51,36 +51,46 @@ main ul li a{
 
 /* search button */
 main form:nth-of-type(1) {
+    position: relative;
+    width: 100%;
+    max-width: 25em;
+
     grid-column-start: 2;
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-
-    height: 1.5em;
+    
 }
-
+main form:nth-of-type(1) label{
+    font-size: 0.1px;
+    display: none;
+}
 main form:nth-of-type(1) input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8em .75em;
+
     font-size: .6em;
-    border: 1px solid var(--color-greytext);
-    width: 10em;
-    padding: .25em .5em .25em .5em;
-    border-radius: .5em;
+    border: .12em solid var(--color-greytext);
+    border-radius: .25em;
+    outline: none;
 }
-
 main form:nth-of-type(1) button {
-    appearance: none;
-    border-color: transparent;
+    position: absolute;
+    right: .95em;
+    top: 50%;
+    transform: translateY(-50%);
+            
+    /*reset button styles */
     background: none;
-    /* position: absolute;
-    right: 22em; */
-}
-
-main form:nth-of-type(1) button img{
-    width: 1em;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex; 
+}       
+main form:nth-of-type(1) button img {
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* nummer 1 naast zoek */
@@ -323,4 +333,42 @@ body a:focus{
 
 body a:focus-visible{
     border: 2px solid var(--color-links);
+}
+
+
+
+/****************************************************************/
+/* styling voor de header als de browser minimaal 38em breed is */
+/****************************************************************/
+@media (min-width:38em) {
+    main form:nth-of-type(1) {
+        position: relative;
+        width: 100%;
+        max-width: 25em;
+
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        /* display: flex;
+        justify-content: flex-end; */
+    }
+}
+
+/****************************************************************/
+/* styling voor de header als de browser minimaal 38em breed is */
+/****************************************************************/
+@media (min-width:54em) {
+    main form:nth-of-type(1) {
+        position: relative;
+        width: 100%;
+        max-width: 25em;
+
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        /* display: flex;
+        justify-content: flex-end; */
+    }
 }

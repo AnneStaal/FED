@@ -181,11 +181,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
+  - Voor je layout kun je grid-area gebruiken, de tool kan je als hulpmiddel gebruiken ik zou niet de code overnemen. 
+  - https://cssgridgenerator.com/
+  - https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-area
 </details>
 
 
@@ -213,26 +211,44 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Er zijn een paar details van de eerste pagina die mij in de weg zitten. Ik heb ook dingen aan een studentassistent gevraagd, maar die wist het ook niet. Toen heb ik het zelf opgelost.
+  Ik merk dat ik tijdens het coderen in plaats van surface plane, ook de hele tijd bezig ben met het reponsive maken van de website.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Anne                      | Stiene                  | Dylan                            | Kasper                            | Nicha          |
+  | ---                       | ---                     | ---                              | ---                               | ---            |
+  | headerlink                | picture element stylen  | Bij groepje A1                   | Grid kleiner                      |                |
+  | vliegende zoekbar         | Is het genoeg           | grid-scaling oneven verplaatsen  | meer in header (details)          |                |
+  | add shelf knop            |                         | hamburger menu via tabben        | Kaart met locaties van winkels    |                |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+  - Carousel moet buttons erbij
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Font inherit —> inherit je font van je parent
 
+  - Media queries per element apart (dus voor header, footer en main apart) Liefst zelfs met nog meer elementen.
+
+  - Dvh 
+
+  - Z-index:1 voor header dat zoekbalk niet meer zweeft
+  - Scherm moet kleiner 320 px
+
+  - Header foto misschien picture element maken anders
+  - Display:flex;
+    Justify-content:center;
+
+  - Add button:
+    Als open formulier met label input en button.
+    Javascript voor nodig
+
+  - Margin-line:auto —> zorgt ervoor dat het iets in het midden komt te staan.
+  - Wel als je daarvoor max-width hebt gebruikt.
+
+  - Sterren met range en dan steps:1;
 </details>
 
 

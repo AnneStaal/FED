@@ -6,8 +6,7 @@
 }
 
 
-
-
+/* ************************************************************************************************************************************************************************************************************* */
 
 
 /*****************************************************************************************/
@@ -29,6 +28,7 @@
 	--color-button:#F4F1EA;
 	--color-header-hover:#32362d;
 	--color-wit:#ffffff;
+	--color-border-nav:#D8D8D8;
 	/* tekst */
 	--text-LatoRegular: "LatoRegular";
 	--text-LatoBold: "LatoBold";
@@ -37,6 +37,7 @@
 	--text-MerriweatherBold:"MerriweatherBold";
 }
 
+/* ************************************************************************************************************************************************************************************************************* */
 
 /*****************************************************************************************/
 /* 											Fonts		 							   	 */
@@ -66,6 +67,7 @@
 	src: url(../fonts/merriweather-bold-gr-97a99a0fdb5f796fd06d1a1592c6b9fc.woff2);
 }
 
+/* ************************************************************************************************************************************************************************************************************* */
 
 
 
@@ -89,6 +91,7 @@ main{
 	margin: 0 .5em;
 }
 
+/* ************************************************************************************************************************************************************************************************************* */
 
 
 /*****************************************************************************************/
@@ -97,6 +100,8 @@ main{
 header{
   	position:sticky;
   	top:0;
+	z-index: 1;
+
 	display: grid;
 	grid-template-columns: repeat(3, 1fr); 
 	grid-template-rows: 2em repeat(2, 1fr);
@@ -176,6 +181,14 @@ header > ul > li > details > ul > li a:hover{
 
 
 /* reading challenge */
+header a:nth-of-type(1) {
+	height: 2em;
+	grid-column-start: 1;
+	grid-column-end: -1;
+	display: flex;
+	justify-content: center;
+}
+
 header > a img {
 	height: 2em;
 	justify-content: center;
@@ -185,11 +198,6 @@ header a:nth-of-type(2) img {
 	display: none;
 }
 
-header a:nth-of-type(1) {
-	height: 2em;
-	grid-column-start: 1;
-	grid-column-end: -1;
-}
 
 
 /* logo van goodreads */
@@ -267,6 +275,7 @@ header nav:nth-of-type(2) {
   
 }
 
+/* ***************************************************************** */
 /* PROFIELMENU BUTTON */
 header button:nth-of-type(2) {
 	position: relative;
@@ -288,10 +297,20 @@ header button:nth-of-type(2) img{
 	display: block;
 }
 
-
+/* ***************************************************************** */
 /* als menu open is */
 header.is-open  nav:nth-of-type(2) {
-  translate:0% 0;
+	translate:0% 0;
+	transition: 1s;
+}
+
+header.is-open button:nth-of-type(2) {
+	position: fixed;
+	top: 3.5em;
+	left: 20vw;
+}
+header.is-open button:nth-of-type(2) img{
+	width: 4.6em;
 }
 
 header nav:nth-of-type(2) ul{
@@ -304,11 +323,30 @@ header nav:nth-of-type(2) ul a{
 	text-decoration-line: none;
 }
 
+/* wanneer menu dicht is */
+header nav:nth-of-type(2) > button img{
+	width: 3em;
+	height: auto;
+}
+/* wanneer menu open is */
+header.is-open nav:nth-of-type(2) > button{
+	width: 3em;
+	height: auto;
+
+	position: fixed;
+	top: 0;
+	right: 110%;
+}
 
 header nav:nth-of-type(2) ul:nth-of-type(1) {
 	display: flex;
+	justify-content: flex-end;
 	gap:1em;
 	list-style-type:"";
+
+	margin: .2em 0 .2em 0;
+	padding: .2em 1em .2em 0;
+	border-bottom: 1px solid var(--color-border-nav);
 }
 
 header nav:nth-of-type(2) ul:nth-of-type(1) img{
@@ -317,16 +355,43 @@ header nav:nth-of-type(2) ul:nth-of-type(1) img{
 
 header nav:nth-of-type(2) ul:nth-of-type(2){
 	position: fixed;
-	top: 6em;
+	top: 8.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	font-size: .85em;
+	border-top: 1px solid var(--color-border-nav);
+	border-bottom: 1px solid var(--color-border-nav);
+
+	margin: .5em 1em;
+	padding: .5em 0;
+	width: 80%;
 }
 
 header nav:nth-of-type(2) ul:nth-of-type(3){
 	position: fixed;
-	top: 19em;
+	top: 30.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	font-size: .85em;
+	margin: .5em 1em;
+	padding: 0;
+	width: 80%;
+}
+
+
+/****************************************************************/
+/* 		 			header minimaal 25em 						*/
+/****************************************************************/
+@media (min-width:25em) {
+	
 }
 
 /****************************************************************/
-/* styling voor de header als de browser minimaal 38em breed is */
+/* 		 			header minimaal 38em 						*/
 /****************************************************************/
 @media (min-width:38em) {
   	nav:nth-of-type(1) {
@@ -392,17 +457,71 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 		grid-row-start: 1;
 		grid-row-end: 2;
 
-		
+		display: flex;
+		justify-content: center;
  	}
  	header a:nth-of-type(2) img {
 		display: block;
 		height: 2.7em;
  	}
 
+	header > ul > li:nth-of-type(3) details > ul {
+		list-style: none;
+		margin: 0;
+		padding: 1em 1.25em;
+
+		/* VERPLAATSING — dit maakt hem zoals Goodreads */
+		position: absolute;
+		top: 100%; /* direct onder de summary */
+		left: 50%;   /* uitlijnen met de knop */
+
+		width: 15.6em; /* optioneel: breedte zoals Goodreads */
+
+		background: white;
+		border: 1px solid #ddd;
+		box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
+	}
+	header > ul > li:nth-of-type(4) details > ul {
+		list-style: none;
+		margin: 0;
+		padding: 1em 1.25em;
+
+		/* VERPLAATSING — dit maakt hem zoals Goodreads */
+		position: absolute;
+		top: 100%; /* direct onder de summary */
+		left: 70%;   /* uitlijnen met de knop */
+
+		width: 15.6em; /* optioneel: breedte zoals Goodreads */
+
+		background: white;
+		border: 1px solid #ddd;
+		box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
+	}
+
+	/* wanneer menu open is */
+	header.is-open button:nth-of-type(2) {
+		position: fixed;
+		top: 1em;
+	}
+	header.is-open nav:nth-of-type(2) > button{
+		position: fixed;
+		top: 0;
+		right: 120%;
+	}
+	header nav:nth-of-type(2) ul:nth-of-type(2){
+		position: fixed;
+		top: 6.5em;
+	}
+	header nav:nth-of-type(2) ul:nth-of-type(3){
+		position: fixed;
+		top: 28.5em;
+	}
+
+
 }
 
 /****************************************************************/
-/* styling voor de header als de browser minimaal 57em breed is */
+/* 		 			header minimaal 54em 						*/
 /****************************************************************/
 @media (min-width:54em) {
   header > a:last-of-type,
@@ -410,9 +529,21 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
         flex-direction:row;
     
   }
+
+  /* wanneer menu open is */
+	header.is-open button:nth-of-type(2) {
+		position: fixed;
+		top: 1em;
+	}
+	header.is-open nav:nth-of-type(2) > button{
+		position: fixed;
+		top: 0;
+		right: 120%;
+	}
 }
 
 
+/* ************************************************************************************************************************************************************************************************************* */
 
 
 
@@ -428,6 +559,7 @@ h1 a {
 }
 
 
+/* ************************************************************************************************************************************************************************************************************* */
 
 
 /*****************************************************************************************/
@@ -474,7 +606,156 @@ footer img{
 	flex-direction: column;
 }
 
-/*****************************************************************************************/
-/* 								Toegankelijkheid		 							   	 */
-/*****************************************************************************************/
+footer > a:nth-of-type(1) {
+	position: absolute;
+	left: 50vw;
+	top: 130em;
+}
 
+footer > a:nth-of-type(2) {
+	position: absolute;
+	left: 50vw;
+	top: 133em;
+}
+
+footer > p {
+	position: absolute;
+	left: 50vw;
+	top: 150em;
+	font-size: .9em;
+} 
+
+/****************************************************************/
+/* 		 			footer minimaal 25em 						*/
+/****************************************************************/
+@media (min-width:25em) {	
+	footer > a:nth-of-type(1) {
+		position: absolute;
+		left: 60vw;
+		top: 60em;
+	}
+	footer > a:nth-of-type(2) {
+		position: absolute;
+		left: 60vw;
+		top: 63em;
+	}
+
+	footer > p {
+		position: absolute;
+		left: 60vw;
+		top: 73em;
+		font-size: .9em;
+	} 
+	footer a:nth-of-type(3){
+		display: block;
+		position: absolute;
+		left: 60vw;
+		top: 75em;
+		font-size: .9em;
+	}
+}
+
+/****************************************************************/
+/* 		 			footer minimaal 38em 						*/
+/****************************************************************/
+@media (min-width:38em) {
+	footer{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 3em) repeat(2, 2em);
+		column-gap: 1em;
+
+		padding:1em 0;
+		margin: 0 .5em;
+	}
+
+	footer h3:nth-of-type(1){
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	footer ul:nth-of-type(1){
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 2;
+		grid-row-end: -1;
+		
+		margin-top: 0;
+	}
+	footer h3:nth-of-type(2){
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	footer ul:nth-of-type(2){
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		grid-row-end: -1;
+
+		margin-top: 0;
+	}
+	footer h3:nth-of-type(3){
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	footer ul:nth-of-type(3){
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: -1;
+
+		margin-top: 0;
+	}
+
+  	footer a:nth-of-type(1) {
+		position:static;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	footer a:nth-of-type(2) {
+		position:static;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+
+	footer > p {
+		position:static;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 3;
+		grid-row-end: 4;
+
+		display: flex;
+		align-items: center;
+	} 
+	footer a:nth-of-type(3){
+		position:static;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 4;
+		grid-row-end: -1;
+	}
+
+}
+
+/****************************************************************/
+/* 		 			footer minimaal 54em 						*/
+/****************************************************************/
+@media (min-width:54em) {
+  header > a:last-of-type,
+	nav a {
+        flex-direction:row;
+    
+  }
+}
+/* ************************************************************************************************************************************************************************************************************* */

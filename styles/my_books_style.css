@@ -14,8 +14,8 @@
 /*****************************************************************************************/
 main{
     display: grid;
-    grid-template-columns:  9.5em 9.5em repeat(3, 1fr);
-    grid-template-rows: 2em 1.5em .6fr 2em .6fr 12% 23% 2em 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2em 1.5em 1.5em 12% 2em 10% 5% 5% 23% 30% 2em 2em 2em;
 }
 
 main a{
@@ -96,10 +96,10 @@ main form:nth-of-type(1) button img {
 /* nummer 1 naast zoek */
 main ul:nth-of-type(1){
     gap: 1em;
-    grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 1;
-	grid-row-end: 2;
+    grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: 3;
 
     display: flex;
     justify-content: flex-end;
@@ -117,10 +117,10 @@ main ul:nth-of-type(1) img{
 
 /* nummer 2 previous/next */
 main ul:nth-of-type(2){
-    grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 2;
-	grid-row-end: 3;
+    grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 3;
+	grid-row-end: 4;
 
     display: flex;
     align-items: center;
@@ -133,9 +133,15 @@ main ul:nth-of-type(2){
 main ul:nth-of-type(2) li:nth-of-type(1) a{
     color: var(--color-previous-text);
 }
+main ul:nth-of-type(2) li:nth-of-type(1) a:hover{
+    text-decoration: none;
+}
 
 main ul:nth-of-type(2) li:nth-of-type(2) a{
     color: var(--color-previous-text);
+}
+main ul:nth-of-type(2) li:nth-of-type(2) a:hover{
+    text-decoration: none;
 }
 
 /* nummer 3 bookshelves */
@@ -144,8 +150,8 @@ main ul:nth-of-type(3){
     flex-direction: column;
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
 }
 
 /* add to shelf button */
@@ -155,8 +161,8 @@ main > button {
 
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 4;
-	grid-row-end: 5;
+	grid-row-start: 5;
+	grid-row-end: 6;
 
     border: 1px solid var(--color-button-border);
     border-radius: .4em;
@@ -172,8 +178,8 @@ main ul:nth-of-type(4){
 
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 5;
-	grid-row-end: 6;
+	grid-row-start: 6;
+	grid-row-end: 7;
 }
 
 /* nummer 5 add books */
@@ -183,8 +189,8 @@ main ul:nth-of-type(5){
 
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 6;
-	grid-row-end: 7;
+	grid-row-start: 7;
+	grid-row-end: 8;
 }
 
 /* nummer 6 tools */
@@ -194,20 +200,22 @@ main ul:nth-of-type(6){
 
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 7;
-	grid-row-end: 8;
+	grid-row-start: 8;
+	grid-row-end: 9;
 }
 
 /* nummer 7 boeken */
 main ul:nth-of-type(7){
     grid-column-start: 2;
 	grid-column-end: -1;
-	grid-row-start: 3;
-	grid-row-end: 8;
+	grid-row-start: 4;
+	grid-row-end: 9;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+
+    gap: .5em;
 }
 
 main ul:nth-of-type(7) li{
@@ -224,9 +232,9 @@ main ul:nth-of-type(7) img{
 /* forms over boeken grid */
 main form:nth-of-type(2){
     grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 8;
-	grid-row-end: 9;
+	grid-column-end: -1;
+	grid-row-start: 11;
+	grid-row-end: 12;
 
     display: flex;
     justify-content: flex-end;
@@ -246,10 +254,10 @@ main form:nth-of-type(2) select{
 }
 
 main form:nth-of-type(3){
-    grid-column-start: 3;
+    grid-column-start: 1;
 	grid-column-end: -1;
-	grid-row-start: 8;
-	grid-row-end: 9;
+	grid-row-start: 12;
+	grid-row-end: 13;
 
     display: flex;
     flex-direction: row;
@@ -272,10 +280,10 @@ main form:nth-of-type(3) select{
 
 /* nummer 8 previous/next */
 main ul:nth-of-type(8){
-    grid-column-start: 2;
-	grid-column-end: 4;
-	grid-row-start: 9;
-	grid-row-end: 10;
+    grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 13;
+	grid-row-end: -1;
 
     display: flex;
     align-items: center;
@@ -288,31 +296,16 @@ main ul:nth-of-type(8){
 main ul:nth-of-type(8) li:nth-of-type(1) a{
     color: var(--color-previous-text);
 }
+main ul:nth-of-type(8) li:nth-of-type(1) a:hover{
+    text-decoration: none;
+}
 
 main ul:nth-of-type(8) li:nth-of-type(2) a{
     color: var(--color-previous-text);
 }
-
-/*****************************************************************************************/
-/* 											Footer		 							   	 */
-/*****************************************************************************************/
-footer > a:nth-of-type(1) {
-	position: absolute;
-	left: 60vw;
-	top: 60em;
+main ul:nth-of-type(8) li:nth-of-type(2) a:hover{
+    text-decoration: none;
 }
-footer > a:nth-of-type(2) {
-	position: absolute;
-	left: 60vw;
-	top: 63em;
-}
-
-footer > p {
-	position: absolute;
-	left: 60vw;
-	top: 73em;
-	font-size: .9em;
-} /* werkt nog niet helemaal */
 
 /*****************************************************************************************/
 /* 											Toegankelijkheid		 					 */
@@ -334,11 +327,192 @@ body a:focus{
 body a:focus-visible{
     border: 2px solid var(--color-links);
 }
+/****************************************************************/
+/* 		 			main minimaal 25em 			    			*/
+/****************************************************************/
+@media (min-width:25em) {
+    main{
+        display: grid;
+        grid-template-columns:  9.5em 9.5em repeat(4, 1fr);
+        grid-template-rows: 2em 1.5em .6fr 2em .6fr 12% 23% 2em 2em;
+    }
 
+    main h1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    /* search button */
+    main form:nth-of-type(1) {
+        position: relative;
+        width: 100%;
+        max-width: 25em;
+
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        
+    }
+
+    main form:nth-of-type(1) button {
+        position: absolute;
+        right: .95em;
+        top: 50%;
+        transform: translateY(-50%);
+                
+        /*reset button styles */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex; 
+    }       
+
+    /* nummer 1 naast zoek */
+    main ul:nth-of-type(1){
+        gap: 1em;
+        grid-column-start: 3;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        font-size: .9em;
+    }
+
+    /* nummer 2 previous/next */
+    main ul:nth-of-type(2){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        font-size: 1em;
+    }
+
+    /* nummer 3 bookshelves */
+    main ul:nth-of-type(3){
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    /* add to shelf button */
+    main > button {
+        width: 6em;
+        height: 2em;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        border: 1px solid var(--color-button-border);
+        border-radius: .4em;
+        background-color: var(--color-button);
+        padding: .25em .8em;
+        font-size: .7em;
+    }
+
+    /* nummer 4 reading activity */
+    main ul:nth-of-type(4){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    /* nummer 5 add books */
+    main ul:nth-of-type(5){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    /* nummer 6 tools */
+    main ul:nth-of-type(6){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+    /* nummer 7 boeken */
+    main ul:nth-of-type(7){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 8;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    main ul:nth-of-type(7) li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* forms over boeken grid */
+    main form:nth-of-type(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 9;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        gap: .2em;
+    }
+
+    main form:nth-of-type(3){
+        grid-column-start: 3;
+        grid-column-end: -1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: .2em;
+    }
+
+    /* nummer 8 previous/next */
+    main ul:nth-of-type(8){
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 10;
+
+        font-size: 1em;
+    }
+
+}
 
 
 /****************************************************************/
-/* styling voor de header als de browser minimaal 38em breed is */
+/* 		 			main minimaal 38em 			    			*/
 /****************************************************************/
 @media (min-width:38em) {
     main form:nth-of-type(1) {
@@ -353,12 +527,23 @@ body a:focus-visible{
         /* display: flex;
         justify-content: flex-end; */
     }
+
+    main ul:nth-of-type(7) img{
+    width: 10em;
+    box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.25);
+    }
 }
 
 /****************************************************************/
-/* styling voor de header als de browser minimaal 38em breed is */
+/* 		 			main minimaal 50em 			    			*/
 /****************************************************************/
-@media (min-width:54em) {
+@media (min-width:50em) {
+    main{
+        display: grid;
+        grid-template-columns: 9.5em 9.5em repeat(4, 1fr);
+        grid-template-rows: 2em 1.5em 18% 2em 18% 8% 10% 2em 2em;
+    }
+
     main form:nth-of-type(1) {
         position: relative;
         width: 100%;
@@ -368,7 +553,40 @@ body a:focus-visible{
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 2;
-        /* display: flex;
-        justify-content: flex-end; */
+    }
+
+/* nummer 7 boeken */
+    main ul:nth-of-type(7){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 8;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    main form:nth-of-type(3){
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 8;
+        grid-row-end: 9;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: .5em;
+    }
+    /* nummer 8 previous/next */
+    main ul:nth-of-type(8){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 9;
+        grid-row-end: 10;
+
+        font-size: 1em;
     }
 }

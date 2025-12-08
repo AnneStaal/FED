@@ -18,10 +18,12 @@
 		<a href="#" aria-label="Reading challenge favorites"><img src="images/header_reading_challenges.jpg" alt="image with the text 2025 reading challenge favorites"></a>
 		<a href="#" aria-label="Reading challenge favorites"><img src="images/header_reading_challenge_groot.jpg" alt="image with the text 2025 reading challenge favorites"></a>
 		<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
-			<!-- <form action="search">
-				<input type="text" placeholder="Search books">
-				
-			</form> -->
+			<form action="search" hidden>
+				<label for="search_books">Search books</label>
+				<input id="search_books" type="text" placeholder="Search books">
+
+				<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+			</form>
 		<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
 		
 			<!--dit is een inklap menu-->
@@ -71,7 +73,7 @@
 			<li><a href="#"> Home</a></li>
 			<li><a href="index.html"> My Books</a></li>
 			<li><details>
-				<summary>Browse</summary>
+				<summary>Browse <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"></path> </g></svg></summary>
 				<ul>
 					<li><a href="#">Recommendations</a></li>
 					<li><a href="#">Choice Awards</a></li>
@@ -85,7 +87,7 @@
 			</details>
 			</li> 
 			<li><details>
-				<summary>Community</summary>
+				<summary>Community <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"></path> </g></svg></summary>
 				<ul>
 					<li><a href="#">Groups</a></li>
 					<li><a href="#">Discussions</a></li>
@@ -146,7 +148,13 @@
 			<li><a href="#">Physical-tbr (28)</a></li>
 		</ul>
 
+		<!-- add shelf -->
 		<button>Add shelf</button>
+		<form action="addToShelf" hidden>
+			<label for="addShelf">Add a shelf:</label>
+			<input id="addShelf" type="text">
+			<button>add</button>
+		</form>
 		<!--Hier moet nog een element onder maar weet niet hoe ik dat moet doen zonder div, als je op knop drukt komt er een form. -->
 		
 		<!-- nummer 4 reading activity -->

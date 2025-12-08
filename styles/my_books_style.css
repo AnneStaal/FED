@@ -15,7 +15,7 @@
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2em 1.5em 1.5em 12% 2em 10% 5% 5% 23% 30% 2em 2em 2em;
+    grid-template-rows: 2em 1.5em 1.5em 10% 3.5em 10% 5% 5% 23% 30% 2em 2em 2em;
 }
 
 main a{
@@ -62,7 +62,6 @@ main form:nth-of-type(1) {
     
 }
 main form:nth-of-type(1) label{
-    font-size: 0.1px;
     display: none;
 }
 main form:nth-of-type(1) input{
@@ -150,7 +149,7 @@ main ul:nth-of-type(3){
     flex-direction: column;
     grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 4;
+	grid-row-start: 3;
 	grid-row-end: 5;
 }
 
@@ -170,6 +169,52 @@ main > button {
     padding: .25em .8em;
     font-size: .7em;
 }
+
+/* when clicked on shelf button */
+main.is-open form:nth-of-type(2){
+    display: block;
+    
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 5;
+	grid-row-end: 6;
+
+    display: grid;
+    grid-template-columns: 7em 1fr;
+    grid-template-rows: repeat(2, 1.5em);
+    column-gap: .3em;
+}
+main.is-open form:nth-of-type(2) label{
+    font-size: .8em;
+    font-family: var(--text-LatoBold);
+    grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+main.is-open form:nth-of-type(2) input{
+    grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+main.is-open form:nth-of-type(2) button{
+    grid-column-start: 2;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+    font-size: .7em;
+    border-radius: .2em;
+    border: 1px solid var(--color-button-border);
+    background-color: var(--color-button);
+}
+
+main.is-open > button{
+    display: none;
+}
+
+
 
 /* nummer 4 reading activity */
 main ul:nth-of-type(4){
@@ -230,7 +275,7 @@ main ul:nth-of-type(7) img{
 }
 
 /* forms over boeken grid */
-main form:nth-of-type(2){
+main form:nth-of-type(3){
     grid-column-start: 2;
 	grid-column-end: -1;
 	grid-row-start: 11;
@@ -242,18 +287,18 @@ main form:nth-of-type(2){
 
     gap: .2em;
 }
-main form:nth-of-type(2) label{
+main form:nth-of-type(3) label{
     font-size: .8em;
     color: var(--color-greytext);
 }
 
-main form:nth-of-type(2) select{
+main form:nth-of-type(3) select{
     font-size: .9em;
     color: var(--color-selecttext);
     height: 1.5em;
 }
 
-main form:nth-of-type(3){
+main form:nth-of-type(4){
     grid-column-start: 1;
 	grid-column-end: -1;
 	grid-row-start: 12;
@@ -266,12 +311,12 @@ main form:nth-of-type(3){
 
     gap: .2em;
 }
-main form:nth-of-type(3) label{
+main form:nth-of-type(4) label{
     font-size: .8em;
     color: var(--color-greytext);
 }
 
-main form:nth-of-type(3) select{
+main form:nth-of-type(4) select{
     font-size: .9em;
     color: var(--color-selecttext);
     height: 1.5em;
@@ -308,6 +353,11 @@ main ul:nth-of-type(8) li:nth-of-type(2) a:hover{
 }
 
 /*****************************************************************************************/
+/* 											main.is-open    		 					 */
+/*****************************************************************************************/
+
+
+/*****************************************************************************************/
 /* 											Toegankelijkheid		 					 */
 /*****************************************************************************************/
 body a:hover{
@@ -327,14 +377,41 @@ body a:focus{
 body a:focus-visible{
     border: 2px solid var(--color-links);
 }
+
 /****************************************************************/
-/* 		 			main minimaal 25em 			    			*/
+/* 		 			main minimaal 24em 			    			*/
 /****************************************************************/
-@media (min-width:25em) {
+@media (min-width:24em) {
     main{
         display: grid;
-        grid-template-columns:  9.5em 9.5em repeat(4, 1fr);
-        grid-template-rows: 2em 1.5em .6fr 2em .6fr 12% 23% 2em 2em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2em 1.5em 1.5em 15% 3em 12% 8% 5% 23% 10% 2em 2em 2em;
+    }
+
+   /* nummer 7 boeken */
+    main ul:nth-of-type(7){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 4;
+        grid-row-end: 8;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+/****************************************************************/
+/* 		 			main minimaal 28em 			    			*/
+/****************************************************************/
+@media (min-width:28em) {
+   
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2em 1.5em 20% 3.5em 16% 10% 30% 2em 2em;
+
+        transition: 1s;
     }
 
     main h1{
@@ -418,6 +495,18 @@ body a:focus-visible{
         padding: .25em .8em;
         font-size: .7em;
     }
+    main.is-open form:nth-of-type(2){
+        display: block;
+        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        display: grid;
+        grid-template-columns: 7em 1fr;
+        grid-template-rows: repeat(2, 1em);
+    }
 
     /* nummer 4 reading activity */
     main ul:nth-of-type(4){
@@ -471,7 +560,7 @@ body a:focus-visible{
     }
 
     /* forms over boeken grid */
-    main form:nth-of-type(2){
+    main form:nth-of-type(3){
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 8;
@@ -484,7 +573,7 @@ body a:focus-visible{
         gap: .2em;
     }
 
-    main form:nth-of-type(3){
+    main form:nth-of-type(4){
         grid-column-start: 3;
         grid-column-end: -1;
         grid-row-start: 8;
@@ -515,23 +604,205 @@ body a:focus-visible{
 /* 		 			main minimaal 38em 			    			*/
 /****************************************************************/
 @media (min-width:38em) {
-    main form:nth-of-type(1) {
+    main{
+        transition: 1s;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2em 1.5em 20% 3.5em 16% 10% 35% 2em 2em;
+
+        transition: 1s;
+    }
+
+    main h1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    /* search button */
+   main form:nth-of-type(1) {
         position: relative;
         width: 100%;
         max-width: 25em;
 
-        grid-column-start: 3;
-        grid-column-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        /* display: flex;
-        justify-content: flex-end; */
+    }
+
+    main form:nth-of-type(1) button {
+        position: absolute;
+        right: .95em;
+        top: 50%;
+        transform: translateY(-50%);
+                
+        /*reset button styles */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex; 
+    }       
+
+    /* nummer 1 naast zoek */
+    main ul:nth-of-type(1){
+        gap: 1em;
+        grid-column-start: 3;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        font-size: .9em;
+    }
+
+    /* nummer 2 previous/next */
+    main ul:nth-of-type(2){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        font-size: 1em;
+    }
+
+    /* nummer 3 bookshelves */
+    main ul:nth-of-type(3){
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    /* add to shelf button */
+    main > button {
+        width: 6em;
+        height: 2em;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        border: 1px solid var(--color-button-border);
+        border-radius: .4em;
+        background-color: var(--color-button);
+        padding: .25em .8em;
+        font-size: .7em;
+    }
+    main.is-open form:nth-of-type(2){
+        display: block;
+        
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+
+        display: grid;
+        grid-template-columns: 7em 1fr;
+        grid-template-rows: repeat(2, 1em);
+    }
+
+    /* nummer 4 reading activity */
+    main ul:nth-of-type(4){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    /* nummer 5 add books */
+    main ul:nth-of-type(5){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    /* nummer 6 tools */
+    main ul:nth-of-type(6){
+        display: flex;
+        flex-direction: column;
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+    /* nummer 7 boeken */
+    main ul:nth-of-type(7){
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 8;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    main ul:nth-of-type(7) li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     main ul:nth-of-type(7) img{
     width: 10em;
     box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.25);
     }
+
+    /* forms over boeken grid */
+    main form:nth-of-type(3){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 9;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        gap: .2em;
+    }
+
+    main form:nth-of-type(4){
+        grid-column-start: 3;
+        grid-column-end: -1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: .2em;
+    }
+
+    /* nummer 8 previous/next */
+    main ul:nth-of-type(8){
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 10;
+
+        font-size: 1em;
+    }
+
+
+   
 }
 
 /****************************************************************/
@@ -542,6 +813,8 @@ body a:focus-visible{
         display: grid;
         grid-template-columns: 9.5em 9.5em repeat(4, 1fr);
         grid-template-rows: 2em 1.5em 18% 2em 18% 8% 10% 2em 2em;
+
+        transition: 1s;
     }
 
     main form:nth-of-type(1) {
@@ -567,7 +840,7 @@ body a:focus-visible{
         grid-template-rows: repeat(4, 1fr);
     }
 
-    main form:nth-of-type(3){
+    main form:nth-of-type(4){
         grid-column-start: 3;
         grid-column-end: 5;
         grid-row-start: 8;

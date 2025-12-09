@@ -42,7 +42,7 @@ main ul{
 
 main ul li h2{
     font-size: .8em;
-    font-family: var(--text-LatoBold);
+    font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 main ul li a{

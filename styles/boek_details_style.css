@@ -31,22 +31,368 @@ main ul:nth-of-type(1) img{
 	width: 2em;
 }
 
-/* Zelf sterren invullen */
-main ul:nth-of-type(2){
+main ul{
 	list-style-type: "";
+}
+
+/*****************************************************************************************/
+/* 											Sterren input			 					 */
+/* 			bron:https://codepen.io/AnneStaal/pen/YPqdxBy?editors=1100 van Sanne		 */
+/*****************************************************************************************/
+main label {
+  display:inline-grid;
+}
+
+main input[type="range"] {
+  --max: attr(max type(<integer>));
+  /* de maat van een ster */
+  /* wat robuustheid voor als max hoog is en/of het scherm smal */
+  --s: min(8em, 80vw / var(--max));
+
+  /* in de eerste gridcel - samen met de after for focus */
+  grid-area:1/1;
+  
+  /* anders moet je raar max - 1 doen */
+  box-sizing: border-box;
+  height: var(--s);
+  /* geen aspect-ratio, maar width - anders rare overflow op kleine schermen */
+  width: calc(var(--s) * var(--max));
+  padding-inline:
+    calc(var(--s) * .75)
+    calc(var(--s) * .25);
+
+  /* Surprise! I am using an SVG but you can get the same visual using the gradients below */
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 5 L79 95 L2 40 L98 40 L21 95 Z'/></svg>")
+    0 / var(--s) 100%;
+
+  /*   mask: 0 calc(.4*var(--s))/var(--s);  */
+  /*   mask-image: conic-gradient(from 162deg at 50% 65%,#000 .1turn,#0000 0), conic-gradient(from 18deg at 21% 55%,#000 .1turn,#0000 0), conic-gradient(from 306deg at 79% 55%,#000 .1turn,#0000 0);  */
+
+  appearance: none;
+  cursor: pointer;
+  
+  background-color:var(--color-star-empty);
+}
+
+main input[value="x"] {
+    scale:2;
+}
+
+/* de thumb wordt vergroot door aan weerzijde een border-image uit te breiden */
+main input[type="range"]::-webkit-slider-thumb {
+  width: 1px;
+  
+  /* vind een linear-gradient meer gepast dan een conic-gradient */
+  border-image-source:
+    linear-gradient(
+      90deg,
+      /* alles voor de thumb en de thumb zelf */
+      var(--color-star-fill) calc(50% + var(--s) * .25),
+      /* alles na de thumb */
+      var(--color-star-empty) 0
+    );
+  /* met fill wordt de thumb gevuld */
+  border-image-slice: fill 0;
+  /* 100vw --> om zeker te zjn dat de uitbreiding van de border-image groot genoeg is */
+  border-image-outset: var(--s) 100vw;
+  appearance: none;
+}
+
+main input[type="range"]::-moz-range-thumb {
+  width: 1px;
+  border-image-source:
+    linear-gradient(
+      90deg,
+      var(--color-star-fill) calc(50% + var(--s) * .25),
+      var(--color-wit) 0
+    );
+  border-image-slice: fill 0;
+  border-image-outset: var(--s) 100vw;
+  appearance: none;
+  appearance: none;
+}
+
+/* focusring */
+main label:has(:focus-visible)::after {
+  content:"";
+  grid-area:1/1;
+  
+  border-radius:.5em;
+  outline:solid .25em var(--rating-focus);
+  outline-offset:.25em;
+}
+
+main   details summary::marker{
+	content: ' ';
+}
+
+main  details summary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main  details summary img{
+	width: 1.2em;
+	height: auto;
+}
+
+/****************************************************************/
+/* 		 			more also enjoyed 			    			*/
+/****************************************************************/
+main > ul:nth-of-type(4){
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+	gap: 4em;
+	scrollbar-width:thin;
+	scrollbar-color: var(--color-selecttext);
+	
+	anchor-name: --carousel;
+}
+main > ul:nth-of-type(4) li{
+	list-style-type:"";
+}
+
+main > ul:nth-of-type(4) li a{
+	display: grid;
+	grid-template-columns: 1em 100%;
+	grid-template-rows: 13em 2em 1.5em 1em;
+
+	text-decoration: none;
+}
+
+main > ul:nth-of-type(4) li a:hover{
+	text-decoration: underline;
+}
+
+main > ul:nth-of-type(4) li a img:nth-of-type(1){
+	grid-column-start: 1;
+	grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 13em;
+	width: auto;
+}
+main > ul:nth-of-type(4) li a h4{
+	grid-column-start: 1;
+	grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+	margin: 0;
+	display: flex;
+	align-items: center;
+
+	font-size: .9em;
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
+}
+
+main > ul:nth-of-type(4) li a p:nth-of-type(1){
+	grid-column-start: 1;
+	grid-column-end: -1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+	margin: 0;
+
+	font-size: .9em;
+	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main > ul:nth-of-type(4) li a img:nth-of-type(2){
+	grid-column-start: 1;
+	grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+	width: 1em;
+	height: auto;
+}
+main > ul:nth-of-type(4) li a p:nth-of-type(2){
+	grid-column-start: 2;
+	grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+	margin: 0;
+	font-size: .8em;
+	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main > ul:nth-of-type(4) li a p:nth-of-type(2) strong{
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* details{
+	position: relative;
+}
+
+details summary::after{
+	content:"read more";
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+details [open] summary::after{
+	content: "read less";
+} */
+
+
+/****************************************************************/
+/* 		 			zoekbar			 			    			*/
+/****************************************************************/
+
+main form:nth-of-type(1) {
+    position: relative;
+    width: 100%;
+    max-width: 25em;
+
+    grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+    
+}
+main form:nth-of-type(1) label{
+    display: none;
+}
+main form:nth-of-type(1) input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: .8em .75em;
+
+    font-size: .6em;
+    border: .12em solid var(--color-greytext);
+    border-radius: .25em;
+    outline: none;
+}
+main form:nth-of-type(1) button {
+    position: absolute;
+    right: .95em;
+    top: 50%;
+    transform: translateY(-50%);
+            
+    /*reset button styles */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex; 
+}       
+main form:nth-of-type(1) button img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/****************************************************************/
+/* 			lists with this books, from our members	   			*/
+/****************************************************************/
+main > ul:nth-of-type(5){
+	margin: 0 0 1em .5em;
+	padding: 0;
+	gap: 1em;
 
 	display: flex;
 	flex-direction: row;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	overscroll-behavior-x: contain;
+	scrollbar-width:thin;
+	scrollbar-color: var(--color-selecttext);
 }
 
-main ul:nth-of-type(2) img{
-	width: 2em;
+main > ul:nth-of-type(5) li h3 {
+	margin: 0;
 }
+main > ul:nth-of-type(5) li h3 a{
+	font-family: var(--text-LatoRegular);
+	font-weight:200;
+	font-size: .9em;
+	text-decoration: none;
+	color: var(--color-text-heading);
+
+	margin: 0;
+}
+
+main > ul:nth-of-type(5) li p{
+	font-family: var(--text-LatoRegular);
+	font-size: .8em;
+	color: var(--color-greytext);
+
+	margin: 0;
+}
+
+main > ul:nth-of-type(5) li ul{
+	gap: 1em;
+	margin: 0;
+	padding: 0;
+
+	width: 17em;
+    height: 12.6em;
+	border-radius: 0.8em;
+
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+main > ul:nth-of-type(5) li ul li img{
+	width: 6em;
+	height: auto;
+
+	border-radius: .5em;
+}
+
+main > ul:nth-of-type(5) li:nth-of-type(1) ul{
+	background-color:var(--color-list-books-1);
+}
+main > ul:nth-of-type(5) li:nth-of-type(2) ul{
+	background-color:var(--color-list-books-2);
+}
+main > ul:nth-of-type(5) li:nth-of-type(2) ul li{
+	transform: rotate(20deg);
+	display: flex;
+	gap: 1em;
+}
+main > ul:nth-of-type(5) li:nth-of-type(3) ul{
+	background-color:var(--color-list-books-3);
+}
+main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(1){
+	margin-top: 3.7em;
+}
+main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(3){
+	margin-bottom: 3.7em;
+}
+
+main > button:nth-of-type(5){
+	background-color: var(--color-wit);
+	border: .2em solid var(--color-button-border-detail);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-LatoRegular);
+
+	height: 2.75em;
+	padding: 0 1.25em;
+}
+
+
+
 
 /*****************************************************************************************/
 /* 											Footer		 							   	 */
 /*****************************************************************************************/
-
 
 
 /*****************************************************************************************/

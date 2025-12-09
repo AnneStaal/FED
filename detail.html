@@ -19,21 +19,23 @@
 		<a href="#" aria-label="Reading challenge favorites"><img src="images/header_reading_challenges.jpg" alt="image with the text 2025 reading challenge favorites"></a>
 		<a href="#" aria-label="Reading challenge favorites"><img src="images/header_reading_challenge_groot.jpg" alt="image with the text 2025 reading challenge favorites"></a>
 		<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
-			<!-- <form action="search">
-				<input type="text" placeholder="Search books">
-				
-			</form> -->
-			<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
+			<form action="search" hidden>
+				<label for="search_books">Search books</label>
+				<input id="search_books" type="text" placeholder="Search books">
+
+				<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+			</form>
+		<a href="#" aria-label="Goodreads Home"><img src="images/goodreads_logo.svg" alt="logo of GoodReads"></a>
 		
 			<!--dit is een inklap menu-->
-			<nav hidden>
-				<ul>
-					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
-					<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
-					<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
-					<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
-				</ul>
-			</nav>
+		<nav hidden>
+			<ul>
+				<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
+				<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
+				<li><a href="#"><img src="images/nav_msgs.svg" alt="messages"> </a></li>
+				<li><a href="#"><img src="images/nav_friend.svg" alt="friends"> </a></li>
+			</ul>
+		</nav>
 
 		<button>
 			<img src="images/profielfoto.jpg" alt="profilepicture form user"> 
@@ -41,6 +43,7 @@
 		</button>
 
 		<nav>
+				<button><img src="images/cross_close_black.svg" alt="an cross icon to close the menu"></button>
 				<ul>
 					<li><a href="#"><img src="images/nav_notifications.svg" alt="notifactions"></a></li>
       				<li><a href="#"><img src="images/nav_discussions.svg" alt="discussions"> </a></li>
@@ -71,7 +74,7 @@
 			<li><a href="#"> Home</a></li>
 			<li><a href="index.html"> My Books</a></li>
 			<li><details>
-				<summary>Browse</summary>
+				<summary>Browse <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"></path> </g></svg></summary>
 				<ul>
 					<li><a href="#">Recommendations</a></li>
 					<li><a href="#">Choice Awards</a></li>
@@ -83,9 +86,9 @@
 					<li><a href="#">News & Interviews</a></li>
 				</ul>
 			</details>
-			</li> <!--Dropdown menu, hoe??-->
+			</li> 
 			<li><details>
-				<summary>Community</summary>
+				<summary>Community <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.9188 8.17969H11.6888H6.07877C5.11877 8.17969 4.63877 9.33969 5.31877 10.0197L10.4988 15.1997C11.3288 16.0297 12.6788 16.0297 13.5088 15.1997L15.4788 13.2297L18.6888 10.0197C19.3588 9.33969 18.8788 8.17969 17.9188 8.17969Z" fill="#292D32"></path> </g></svg></summary>
 				<ul>
 					<li><a href="#">Groups</a></li>
 					<li><a href="#">Discussions</a></li>
@@ -119,27 +122,316 @@
 		<button>
 			Buy on Amazon <hr> <img src="images/arrow-down.svg" alt="icon of an arrow pointing down">
 		</button>
-		<ul>
-			<li><img src="images/star-empty-border.svg" alt="image of a star thats empty"></li>
-			<li><img src="images/star-empty-border.svg" alt="image of a star thats empty"></li>			
-			<li><img src="images/star-empty-border.svg" alt="image of a star thats empty"></li>
-			<li><img src="images/star-empty-border.svg" alt="image of a star thats empty"></li>
-			<li><img src="images/star-empty-border.svg" alt="image of a star thats empty"></li>
-		</ul>
+		<!-- rating sterren -->
+		<label aria-label="sterrenpracht">
+  			<input type="range" min="1" value="0" max="5" step=".5" required>
+		</label>
+
 		<p>Rate this book</p>
 
 		<img src="images/pencil.svg" alt="icon of a pencil"><a href="#">Edit my activity</a>
 
 		<p>An alternative cover edition for this ISBN can be found <a href="#">here</a>.</p>
 
+		<p>
+			Working at the local processing plant, Marcos is in the business of slaughtering humans—though no one calls them that anymore.
+		</p>
+		<details>
+			<summary>Show more <img src="images/arrow-down.svg" alt="icon of a arrow pointing down"></summary>
+			<p>
+				His wife has left him, his father is sinking into dementia, and Marcos tries not to think too hard about how he makes a living. After all, it happened so quickly. 
+				First, it was reported that an infectious virus has made all animal meat poisonous to humans. 
+				Then governments initiated the “Transition.” Now, eating human meat—“special meat”—is legal. 
+				Marcos tries to stick to numbers, consignments, processing.
+			</p>
+			<p>
+				Then one day he’s given a a live specimen of the finest quality. 
+				Though he’s aware that any form of personal contact is forbidden on pain of death, little by little he starts to treat her like a human being. 
+				And soon, he becomes tortured by what has been lost—and what might still be saved.
+			</p>
+		</details>
 
+		<ul>
+			<li>Genres</li>
+			<li><a href="#">Horror</a></li>
+			<li><a href="#">Fiction</a></li>
+			<li><a href="#">Dystopia</a></li>
+			<li><a href="#">Science Fiction</a></li>
+			<li><a href="#">Thriller</a></li>
+			<li><a href="#">Audiobook</a></li>
+			<li><a href="#">Adult</a></li>
+			<li><button>...more</button></li>
+		</ul>
+		<ul hidden>
+			<li>Genres</li>
+			<li><a href="#">Horror</a></li>
+			<li><a href="#">Fiction</a></li>
+			<li><a href="#">Dystopia</a></li>
+			<li><a href="#">Science Fiction</a></li>
+			<li><a href="#">Thriller</a></li>
+			<li><a href="#">Audiobook</a></li>
+			<li><a href="#">Adult</a></li>
+			<li><a href="#">Book Club</a></li>
+			<li><a href="#">Horror Thriller</a></li>
+			<li><a href="#">Dark</a></li>
+			<li><a href="#">...show all</a></li>
+		</ul>
+		<p>209 pages, Paperback</p>
+		<p>First published November 29, 2017</p>
+
+	<!-- book details & editions klapmenu -->
+		<details>
+			<summary>Book details & editions <img src="images/arrow-down.svg" alt="icon of a arrow pointing down"></summary>
+
+			<dl>
+				<dt>Literary awards</dt>
+					<dd>
+						<ul>
+							<li><a href="#">Premio Clarín de Novela (2017)</a>,</li>
+							<details>
+								<summary>show more <img src="images/arrow-down.svg" alt="icon of a arrow pointing down"></summary>
+								<li><a href="#">Tähtivaeltaja Award Nominee (2020)</a>,</li>
+								<li><a href="#">Goodreads Choice Award Nominee for Horror (2020)</a>,</li>
+								<li><a href="#"> Ladies of Horror Fiction Award for Best Novel (2020)</a></li>
+							</details>
+						</ul>
+					</dd>
+
+				<dt>Original title</dt>
+					<dd>Cadáver exquisito</dd>
+
+				<dt>Setting</dt>
+					<dd><a href="#">Argentina</a></dd>
+			</dl>
+
+			<h2>This edition</h2>
+			<dl>
+				<dt>Format</dt>
+					<dd>209 pages, Paperback</dd>
+
+				<dt>Published</dt>
+					<dd>
+						<time datetime="2020-08-04">4 augustus 2020</time>
+						by Scribner
+					</dd>
+
+				<dt><abbr title="International Standard Book Number">ISBN</abbr></dt>
+					<dd>
+						9781982150921
+						ISBN10: 1982150920
+					</dd>
+
+				<dt>ASIN</dt>
+					<dd>1982150920</dd>
+
+				<dt>Language</dt>
+					<dd>English</dd>
+			</dl>
+
+			<h2>More editions</h2>
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/titf_scribner_2020.jpg" alt="cover of tender is the flesh scribner 2020">
+						<p>Paperback</p>
+						<p>Scribner</p>
+						<p>2020</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/titf_alfaguara_2017.jpg" alt="cover of tender is the flesh alfaguara 2017">
+						<p>Paperback</p>
+						<p>Alfaguara</p>
+						<p>2017</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/kindle_scribner_2020.jpg" alt="cover of tender is the flesh scribner 2020">
+						<p>Kindle Edition</p>
+						<p>Scribner</p>
+						<p>2020</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/pushkin_press_2020.jpg" alt="cover of tender is the flesh pushkin press 2020">
+						<p>Paperback</p>
+						<p>Pushkin Press</p>
+						<p>2020</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/hardcover_mova_2021.jpg" alt="cover of tender is the flesh mova 2021">
+						<p>Hardcover</p>
+						<p>Mova</p>
+						<p>2021</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/more_editions/eris_paperback_2024.jpg" alt="cover of tender is the flesh eris 2024">
+						<p>Paperback</p>
+						<p>Eris</p>
+						<p>2024</p>
+					</a>
+				</li>
+			</ul>
+			<button>Show all 75 editions</button>
+
+			<h3>More information</h3>
+			<a href="#">Book statistics <button><img src="images/arrow-right.svg" alt="icon of a arrow pointing right"></button></a>
+		</details>
+
+	<h2>Readers <em>also</em> enjoyed</h2>
+		<ul>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/i_who_have_never_known_men_cover.jpg" alt="cover of I who have never known men - Jacqueline Harpman">
+					<h4>I who have never known men</h4>
+					<p>Jacqueline Harpman</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>4.12</strong> · 417k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/the_lamb_cover.jpg" alt="cover of the lamb - Lucy Rose">
+					<h4>The Lamb</h4>
+					<p>Lucy Rose</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.79</strong> · 26.4k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/the_troop_cover.jpg" alt="cover of the troop - Nick Cutter">
+					<h4>The Troop</h4>
+					<p>Nick Cutter</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.83</strong> · 123k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/the_eyes_are_the_best_part_cover.jpg" alt="cover of the eyes are the best part - Monika Kim">
+					<h4>The eyes are the best part</h4>
+					<p>Monika Kim</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.8</strong> · 47.6k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/bunny_cover.jpg" alt="cover of Bunny - Mona Award">
+					<h4>Bunny</h4>
+					<p>Mona Award</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.47</strong> · 317k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/the_vegetarian_cover.jpg" alt="cover of the vegetarian - Han Kang">
+					<h4>The Vegetarian</h4>
+					<p>Han Kang</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.65</strong> · 365k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/lapvona_cover.jpg" alt="cover of Lapvona - Ottessa Moshfegh">
+					<h4>Lapvona</h4>
+					<p>Ottessa Moshfegh</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.53</strong> · 97.2k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/we_used_to_live_here_cover.jpg" alt="cover of We Used to Live Here - Marcus Kliewer">
+					<h4>We Used to Live Here</h4>
+					<p>Marcus Kliewer</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.63</strong> · 235k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/short_stay_in_hell_cover.jpg" alt="cover of A Short Stay in Hell - Steven L. Peck">
+					<h4>A Short Stay in Hell</h4>
+					<p>Steven L. Peck</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>4.16</strong> · 56.2k</p>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/readers_also_enjoyed/brother_cover.jpg" alt="cover of Brother - Ania Ahlborn">
+					<h4>Brother</h4>
+					<p>Ania Ahlborn</p>
+					<img src="images/star-full.svg" alt="image of a star that is filled in">
+					<p><strong>3.91</strong> · 70.5k</p>
+				</a>
+			</li>
+		</ul>
+		<button>All similar books</button>
+
+	<!-- Reviews van andere -->
 		<a name="reviews"></a>
 		<h2>Reviews</h2>
+		<form action="search">
+			<label for="search_books">Search books</label>
+			<input id="search_books" type="text" placeholder="Search books">
+
+			<button aria-label="Search"><img src="images/nav_search.svg" alt="search bar"></button>
+		</form>
+
+
+
+	<!-- Lists with this book, from our members -->
+	 	<h2>Lists with this book, from our members</h2>
+		<ul>
+			<li>
+				<ul>
+					<li><img src="images/list_books/fever_dream.jpg" alt="cover of fever dream - Samanta Schweblin"></li>
+					<li><img src="images/list_books/latin_american_horror&weirdlit.jpg" alt="cover of tender is the flesh - Agustina Bazterrica"></li>
+					<li><img src="images/list_books/her_body_and_other_parties.jpg" alt="cover of her body and other parties - Carmen Maria Machado "></li>
+				</ul>
+				<h3><a href="#">Latin american horror & weirdlit</a></h3>
+				<p>29 books • 2 voters</p>
+			</li>
+			<li>
+				<ul>
+					<li>
+					<img src="images/list_books/kingdom_or_flesh_and_fire.jpg" alt="cover of kingdom or flesh and fire">
+					<img src="images/list_books/a_fire_in_the_flesh.jpg" alt="cover of a fire in the flesh">
+					<img src="images/list_books/both_flesh_and_not.jpg" alt="cover of both flesh and not">
+					</li>
+				</ul>
+				<h3><a href="#">Titles of "Flesh"</a></h3>
+				<p>133 books • 7 voters</p>
+			</li>
+			<li>
+				<ul>
+					<li><img src="images/list_books/frankenstein.jpg" alt="cover of frankenstein"></li>
+					<li><img src="images/list_books/interview_with_the_vampires.jpg" alt="cover of interview with the vampires"></li>
+					<li><img src="images/list_books/haunting_of_hill_house.jpg" alt="cover of haunting of hill house"></li>
+				</ul>
+				<h3><a href="#">Horror Novels Written by Women</a></h3>
+				<p>281 books • 62 voters</p>
+			</li>
+		</ul>
+
+		<button>All lists with this book, from our members</button>
+
 	</main>
 
 	<footer>
-		<h2>Footer</h2>
-		<!-- moet hidden worden -->
+		<h2 hidden>Footer</h2>
 		<h3>Company</h3>
 		<ul>
 			<li><a href="#">About us</a></li>
@@ -166,7 +458,7 @@
 		<a href="#"><img src="images/badge-ios-apple.svg" alt="Link to download GoodReads app on IOS"></a>
 		<a href="#"><img src="images/badge-android.png" alt="Link to download GoodReads app on Android"></a>
 		<p>© 2025 Goodreads, Inc.</p>
-		<a href="#">Mobile version</a>
+		<a href="#" hidden>Mobile version</a>
 	</footer>
     <script defer src="scripts/algemeen.js"></script>
 	<script defer src="scripts/details-boek.js"></script>

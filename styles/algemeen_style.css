@@ -20,20 +20,25 @@
 	--color-nav-links:#333333;
 	--color-greytext:#999999;
 	--color-selecttext:	#696969;
-	--color-footer-text:#1e1915;
-	--color-background:#faf8f6;
+	--color-text:#1e1915;
 	--color-links: #00635d;
+	--color-text-heading:#1e1915;
+	--color-carousel-grey-text-light:#707070;
+	--color-carousel-grey-text-dark:#4f4f4d;
+
+	--color-background:#faf8f6;
 	--color-inputfield: #DCD6CC;
 
 	--color-button-border-detail:#707070;
+	--color-button-border-buy:#409970;
 	--color-button-border:#D6D0C4;
 	--color-button:#F4F1EA;
-	
+
 	--color-header-hover:#32362d;
 	--color-wit:#ffffff;
 	--color-border-nav:#D8D8D8;
 
-	--color-text-heading:#1e1915;
+	
 
 	--color-list-books-1:#ebe2d7;
 	--color-list-books-2:#dee0ed;
@@ -92,7 +97,10 @@
 /*****************************************************************************************/
 body {
 	margin:0;
+
 	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	overflow-x:hidden
 }
 
 h1{
@@ -101,6 +109,10 @@ h1{
 
 a{
 	color:var(--color-links);
+}
+
+p{
+	color: var(--color-text-heading);
 }
 
 main{
@@ -136,11 +148,15 @@ header > ul {
 
 	box-shadow: inset .5em 1em 1em rgba(0, 0, 0, 0.5);/* krijg geen schaduw aan de binnenkant*/
 	box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.25);
+
 }
 header > ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+
+	height: 3.2em;
+	padding: 0 .25em;
 }
 header > ul a{
 	color:var(--color-nav-text);
@@ -173,14 +189,27 @@ header > ul > li > details > ul > li{
   display:flex;
   justify-content:flex-start;
 }
+header > ul  details summary::marker{
+	content: ' ';
+}
+
+header > ul  details summary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header > ul  details summary svg{
+	width: 1.2em;
+	height: auto;
+}
+
 
 /* acties */
 header > ul li:hover{
-	padding: .7rem;
 	background-color: var(--color-header-hover);
 	color: var(--color-wit);
 }
-header > ul a:hover{
+header > ul > li:hover > a{
 	color: var(--color-wit);
 	text-decoration: none;
 }
@@ -193,6 +222,11 @@ header > ul > li > details > ul > li a:hover{
   text-decoration: underline;
   color: var(--color-nav-links);
   background-color: var(--color-wit);
+}
+
+header > ul > li:hover details summary svg path{
+	fill: white;
+	stroke: var(--color-wit);
 }
 
 
@@ -272,23 +306,7 @@ header > ul{
 	color:var(--color-nav-text);
 }
 
-header > ul  details summary::marker{
-	content: ' ';
-}
 
-header > ul  details summary {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-header > ul  details summary svg{
-	width: 1.2em;
-	height: auto;
-}
-header > ul  details summary svg:hover{
-	fill: var(--color-wit);
-	stroke: var(--color-wit);
-}
 
 
 header nav:nth-of-type(2) {
@@ -642,7 +660,7 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 /* 											Main elementen 							   	 */
 /*****************************************************************************************/
 main{
-	margin: .5em .5em 0 .5em ;
+	margin: .5em;
 }
 
 h1 a {
@@ -659,7 +677,7 @@ h1 a {
 footer{
 	background-color: var(--color-background);
 	padding:2em .75em;
-	color: var(--color-footer-text);
+	color: var(--color-text);
 
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -681,7 +699,7 @@ footer ul{
 }
 
 footer ul a{
-	color: var(--color-footer-text);
+	color: var(--color-text);
 	text-decoration-line: none;
 
 }

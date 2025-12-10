@@ -8,46 +8,211 @@
 /*****************************************************************************************/
 /* 											Jouw Styling 							   	 */
 /*****************************************************************************************/
+main ul{
+	list-style-type: "";
+}
 
 
 /*****************************************************************************************/
 /* 											Main elementen 							   	 */
 /*****************************************************************************************/
 
-main img:nth-of-type(1){
-	height: 50vw;
+/* ***************************************************************** */
+/* Info boek */
+main > section{
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: 1fr 3em 1.5em 1.5em 2em 1em;
+	column-gap: 1em;
+	
+	margin-bottom: 1em;
 }
 
-/* sterren rating */
-main ul:nth-of-type(1){
-	list-style-type: "";
+main > section > h1{
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	font-size: 1.5em;
+	text-align: center;
+}
+
+main > section > img{
+	height: 60vw;
+	border-top-right-radius:1em;
+	border-bottom-right-radius:1em;
+	box-shadow: .1em .3em .3em rgba(0, 0, 0, 0.25);
+
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main > section > button:nth-of-type(1){
+	grid-column-start: 2;
+	grid-column-end: -1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	
+	z-index: 1;
+    appearance: none;
+    border-color: transparent;
+    background: none;
 
 	display: flex;
-	flex-direction: row;
+	justify-content: flex-end;
+	align-items:flex-start;
+}
+main > section > button:nth-of-type(1) img{
+	width: 1.5em;
+	height: auto;
+}
+main > section > a{
+	font-size: 1em;
+	font-family: var(--text-MerriweatherRegular), Georgia, 'Times New Roman', Times, serif;
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+main > section > a:nth-of-type(1){
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
+	text-align: center;
+}
+
+main > section > a:nth-of-type(2){
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+
+	display: flex;
+	justify-content: flex-end;
 	align-items: center;
 }
+main > section > p{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
 
-main ul:nth-of-type(1) img{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+/* sterren rating */
+main > section > ul{
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 5;
+	grid-row-end: 6;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+}
+main > section > ul img {
 	width: 2em;
 }
-
-main ul{
-	list-style-type: "";
+main > section > ul li:nth-of-type(6) {
+	font-size: 1.5em;
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
 }
+main > section > a:nth-of-type(3){
+	grid-column-start: 1;
+	grid-column-end: -1;
+	grid-row-start: 6;
+	grid-row-end: 7;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: .8em;
+	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: var(--color-carousel-grey-text-light);
+}
+
+
+
+main > button:nth-of-type(1){
+	background-color: var(--color-wit);
+	border: .15em solid var(--color-button-border-detail);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	gap: .4em;
+
+	height: 2.75em;
+	width: 16rem;
+	padding: 0 1em;
+	margin: 0 2em 1em 2em;
+}
+main > button:nth-of-type(1) img{
+	width: 1.3em;
+	height: auto;
+} 
+
+main > button:nth-of-type(2){
+	background-color: var(--color-wit);
+	border: .15em solid var(--color-button-border-buy);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+	gap: .4em;
+
+	height: 2.75em;
+	width: 16rem;
+	padding: 0 1em;
+	margin: 0 2em 1em 2em;
+}
+main > button:nth-of-type(2) img{
+	width: 2.75em;
+	height: auto;
+	margin-left: 2em;
+	padding: .75em;
+	border-left: .1em solid var(--color-button-border-buy);
+} 
 
 /*****************************************************************************************/
 /* 											Sterren input			 					 */
 /* 			bron:https://codepen.io/AnneStaal/pen/YPqdxBy?editors=1100 van Sanne		 */
-/*****************************************************************************************/
 main label {
   display:inline-grid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main input[type="range"] {
   --max: attr(max type(<integer>));
   /* de maat van een ster */
   /* wat robuustheid voor als max hoog is en/of het scherm smal */
-  --s: min(8em, 80vw / var(--max));
+  --s: min(4em, 40vw / var(--max));
 
   /* in de eerste gridcel - samen met de after for focus */
   grid-area:1/1;
@@ -122,6 +287,49 @@ main label:has(:focus-visible)::after {
   outline-offset:.25em;
 }
 
+/* ***************************************************************** */
+/* RATE THIS BOOK + ACTIVITY */
+main p:nth-of-type(1){
+	text-align: center;
+	margin: 0;
+}
+
+main > a:nth-of-type(1) img{
+	width: 1.5em;
+	height: auto;
+}
+
+main > button:nth-of-type(3){
+	text-decoration: none;
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: var(--color-text-heading);
+
+	appearance: none;
+    border-color: transparent;
+    background: none;
+
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	gap: .6em;
+
+	height: 2.75em;
+	width: 100%;
+	padding: 0 1em;
+	margin: 1em 0;
+}
+main > button:nth-of-type(3) > img{
+	width: 1.5em;
+	height: auto;
+}
+
+/* ***************************************************************** */
+/* UITLEG OVER BOEK*/
+
 main   details summary::marker{
 	content: ' ';
 }
@@ -130,16 +338,101 @@ main  details summary {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	font-size: 1em;
+	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 main  details summary img{
 	width: 1.2em;
 	height: auto;
 }
 
+/* main details summary::after{
+	content:"read more";
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
+main details [open] summary::after{
+	content: "read less";
+} */
+
 /****************************************************************/
-/* 		 			more also enjoyed 			    			*/
-/****************************************************************/
-main > ul:nth-of-type(4){
+/* book details & editions klapmenu */
+main > details:nth-of-type(2) > ul {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	overflow-x: auto;
+	margin: 0 0 1em 0;
+}
+
+main > details:nth-of-type(2) > ul li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15em;
+	margin: 0;
+}
+main > details:nth-of-type(2) > ul li a {
+	margin: 0;
+	text-decoration: none;
+}
+
+main > details:nth-of-type(2) > ul li img {
+	height: 13.6em;
+	width: auto;
+
+	border-top-right-radius:1em;
+	border-bottom-right-radius:1em;
+	box-shadow: .3em .3em .3em rgba(0, 0, 0, 0.25);
+
+	transition: 1s;
+}
+
+main > details:nth-of-type(2) > ul li img:hover {
+	height: 14.1em;
+	width: auto;
+
+	border-top-right-radius:1em;
+	border-bottom-right-radius:1em;
+}
+
+
+
+main > details:nth-of-type(2) > ul li p {
+	margin: .2em;
+	font-size: .9em;
+
+	color: var(--color-carousel-grey-text-light);
+}
+
+main > details:nth-of-type(2) > ul li p:nth-of-type(1) {	
+	color: var(--color-carousel-grey-text-dark);
+}
+
+main > details:nth-of-type(2) > button{
+	background-color: var(--color-wit);
+	border: .2em solid var(--color-button-border-detail);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-LatoRegular);
+
+	height: 2.75em;
+	width: 100%;
+	padding: 0 1.25em;
+	margin-bottom: 1em;
+}
+
+
+
+
+/* ***************************************************************** */
+/* MORE ALSO ENJOYED */
+main > ul:nth-of-type(3){
 	display: flex;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -151,11 +444,11 @@ main > ul:nth-of-type(4){
 	
 	anchor-name: --carousel;
 }
-main > ul:nth-of-type(4) li{
+main > ul:nth-of-type(3) li{
 	list-style-type:"";
 }
 
-main > ul:nth-of-type(4) li a{
+main > ul:nth-of-type(3) li a{
 	display: grid;
 	grid-template-columns: 1em 100%;
 	grid-template-rows: 13em 2em 1.5em 1em;
@@ -163,11 +456,11 @@ main > ul:nth-of-type(4) li a{
 	text-decoration: none;
 }
 
-main > ul:nth-of-type(4) li a:hover{
+main > ul:nth-of-type(3) li a:hover{
 	text-decoration: underline;
 }
 
-main > ul:nth-of-type(4) li a img:nth-of-type(1){
+main > ul:nth-of-type(3) li a img:nth-of-type(1){
 	grid-column-start: 1;
 	grid-column-end: -1;
     grid-row-start: 1;
@@ -180,13 +473,13 @@ main > ul:nth-of-type(4) li a img:nth-of-type(1){
 	height: 13em;
 	width: auto;
 }
-main > ul:nth-of-type(4) li a h4{
+main > ul:nth-of-type(3) li a h4{
 	grid-column-start: 1;
 	grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
 
-	margin: 0;
+	margin: .5em 0 0 0;
 	display: flex;
 	align-items: center;
 
@@ -194,7 +487,7 @@ main > ul:nth-of-type(4) li a h4{
 	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
 }
 
-main > ul:nth-of-type(4) li a p:nth-of-type(1){
+main > ul:nth-of-type(3) li a p:nth-of-type(1){
 	grid-column-start: 1;
 	grid-column-end: -1;
     grid-row-start: 3;
@@ -205,7 +498,7 @@ main > ul:nth-of-type(4) li a p:nth-of-type(1){
 	font-size: .9em;
 	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-main > ul:nth-of-type(4) li a img:nth-of-type(2){
+main > ul:nth-of-type(3) li a img:nth-of-type(2){
 	grid-column-start: 1;
 	grid-column-end: 2;
     grid-row-start: 4;
@@ -214,7 +507,7 @@ main > ul:nth-of-type(4) li a img:nth-of-type(2){
 	width: 1em;
 	height: auto;
 }
-main > ul:nth-of-type(4) li a p:nth-of-type(2){
+main > ul:nth-of-type(3) li a p:nth-of-type(2){
 	grid-column-start: 2;
 	grid-column-end: 3;
     grid-row-start: 4;
@@ -224,7 +517,7 @@ main > ul:nth-of-type(4) li a p:nth-of-type(2){
 	font-size: .8em;
 	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-main > ul:nth-of-type(4) li a p:nth-of-type(2) strong{
+main > ul:nth-of-type(3) li a p:nth-of-type(2) strong{
 	font-size: 1em;
 	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -248,9 +541,8 @@ details [open] summary::after{
 } */
 
 
-/****************************************************************/
-/* 		 			zoekbar			 			    			*/
-/****************************************************************/
+/* ***************************************************************** */
+/* SEARCHBAR */
 
 main form:nth-of-type(1) {
     position: relative;
@@ -295,9 +587,9 @@ main form:nth-of-type(1) button img {
 }
 
 /****************************************************************/
-/* 			lists with this books, from our members	   			*/
-/****************************************************************/
-main > ul:nth-of-type(5){
+/* lists with this books, from our members */
+
+main > ul:nth-of-type(4){
 	margin: 0 0 1em .5em;
 	padding: 0;
 	gap: 1em;
@@ -312,10 +604,10 @@ main > ul:nth-of-type(5){
 	scrollbar-color: var(--color-selecttext);
 }
 
-main > ul:nth-of-type(5) li h3 {
+main > ul:nth-of-type(4) li h3 {
 	margin: 0;
 }
-main > ul:nth-of-type(5) li h3 a{
+main > ul:nth-of-type(4) li h3 a{
 	font-family: var(--text-LatoRegular);
 	font-weight:200;
 	font-size: .9em;
@@ -325,7 +617,7 @@ main > ul:nth-of-type(5) li h3 a{
 	margin: 0;
 }
 
-main > ul:nth-of-type(5) li p{
+main > ul:nth-of-type(4) li p{
 	font-family: var(--text-LatoRegular);
 	font-size: .8em;
 	color: var(--color-greytext);
@@ -333,7 +625,7 @@ main > ul:nth-of-type(5) li p{
 	margin: 0;
 }
 
-main > ul:nth-of-type(5) li ul{
+main > ul:nth-of-type(4) li ul{
 	gap: 1em;
 	margin: 0;
 	padding: 0;
@@ -347,35 +639,35 @@ main > ul:nth-of-type(5) li ul{
 	overflow-x: hidden;
 }
 
-main > ul:nth-of-type(5) li ul li img{
+main > ul:nth-of-type(4) li ul li img{
 	width: 6em;
 	height: auto;
 
 	border-radius: .5em;
 }
 
-main > ul:nth-of-type(5) li:nth-of-type(1) ul{
+main > ul:nth-of-type(4) li:nth-of-type(1) ul{
 	background-color:var(--color-list-books-1);
 }
-main > ul:nth-of-type(5) li:nth-of-type(2) ul{
+main > ul:nth-of-type(4) li:nth-of-type(2) ul{
 	background-color:var(--color-list-books-2);
 }
-main > ul:nth-of-type(5) li:nth-of-type(2) ul li{
+main > ul:nth-of-type(4) li:nth-of-type(2) ul li{
 	transform: rotate(20deg);
 	display: flex;
 	gap: 1em;
 }
-main > ul:nth-of-type(5) li:nth-of-type(3) ul{
+main > ul:nth-of-type(4) li:nth-of-type(3) ul{
 	background-color:var(--color-list-books-3);
 }
-main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(1){
+main > ul:nth-of-type(4) li:nth-of-type(3) ul li:nth-of-type(1){
 	margin-top: 3.7em;
 }
-main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(3){
+main > ul:nth-of-type(4) li:nth-of-type(3) ul li:nth-of-type(3){
 	margin-bottom: 3.7em;
 }
 
-main > button:nth-of-type(5){
+main > button:nth-of-type(4){
 	background-color: var(--color-wit);
 	border: .2em solid var(--color-button-border-detail);
 	border-radius: 3rem;
@@ -384,7 +676,9 @@ main > button:nth-of-type(5){
 	font-family: var(--text-LatoRegular);
 
 	height: 2.75em;
+	width: 100%;
 	padding: 0 1.25em;
+	margin-bottom: 1em;
 }
 
 

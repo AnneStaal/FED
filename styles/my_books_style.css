@@ -610,8 +610,6 @@ body a:focus-visible{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 2em 1.5em 20% 3.5em 16% 10% 35% 2em 2em;
-
-        transition: 1s;
     }
 
     main h1{

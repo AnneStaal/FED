@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik kies voor het startniveau: rood.
 
   #### Je focus:
-  Ik ga me vooral focussen op de surface plane. 
+  Ik ga me vooral focussen op de surface plane, maar ondertussen ben ik ook bezig geweest met het responsive maken van de website.
 </details>
 
 

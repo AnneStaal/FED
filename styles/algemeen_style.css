@@ -34,6 +34,9 @@
 	--color-button-border:#D6D0C4;
 	--color-button:#F4F1EA;
 
+	--color-underline: #419970;
+	--color-divider:#cfccc9;
+
 	--color-header-hover:#32362d;
 	--color-wit:#ffffff;
 	--color-border-nav:#D8D8D8;
@@ -112,12 +115,23 @@ a{
 }
 
 p{
+	font-size: 1em;
 	color: var(--color-text-heading);
 }
 
 main{
 	margin: 0 .5em;
 }
+
+body::selection{
+	color: var(--color-carousel-grey-text-dark);
+	background-color: var(--color-underline);
+}
+
+body:focus-visible{
+	outline: 2px solid crimson;
+  	border-radius: 3px;
+} /* werkt niet weet ook niet zo goed hoe wel */
 
 /* ************************************************************************************************************************************************************************************************************* */
 
@@ -146,7 +160,7 @@ header > ul {
 	justify-content: space-evenly;
   	align-items:center;
 
-	box-shadow: inset .5em 1em 1em rgba(0, 0, 0, 0.5);/* krijg geen schaduw aan de binnenkant*/
+	box-shadow: 0 -.1em .2em rgba(0, 0, 0, 0.25);/* krijg geen schaduw aan de binnenkant*/
 	box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.25);
 
 }
@@ -497,7 +511,8 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 
 		display: flex;
 		justify-content: flex-end;
-		align-items: center;		
+		align-items: center;
+		z-index: 0;		
 	}
 	header form:nth-of-type(1) label{
 		display: none;
@@ -522,6 +537,7 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
         padding: 0;
         display: flex;
 	}
+
 
 
 /* menu */

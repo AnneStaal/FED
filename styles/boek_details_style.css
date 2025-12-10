@@ -6,10 +6,63 @@
 }
 
 /*****************************************************************************************/
+/* 											CUSTOM PROPERTIES 						   	 */
+/*****************************************************************************************/
+:root {
+	/* tekst */
+	--text-ProximaRegular: "ProximaNovaRegular";
+	--text-ProximaItalic: "ProximaNovaItalic";
+	--text-ProximaBold:"ProximaNovaSemiBold";
+}
+/*****************************************************************************************/
+/* 											Fonts		 							   	 */
+/*****************************************************************************************/
+@font-face {
+	font-family:"ProximaNovaRegular" ;
+	src: url(../fonts/ProximaNova-Regular.woff);
+}
+
+@font-face {
+	font-family:"ProximaNovaItalic" ;
+	src: url(../fonts/ProximaNova-RegularIt.woff);
+}
+
+@font-face {
+	font-family:"ProximaNovaSemiBold" ;
+	src: url(../fonts/ProximaNova-Semibold.woff);
+}
+
+
+
+/*****************************************************************************************/
 /* 											Jouw Styling 							   	 */
 /*****************************************************************************************/
+body {
+	margin:0;
+
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;
+
+	overflow-x:hidden
+}
+
+h1{
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+	color:var(--color-links);
+}
+
+p{
+	color: var(--color-text-heading);
+}
+
 main ul{
 	list-style-type: "";
+}
+
+main   details summary::marker{
+	content: ' ';
 }
 
 
@@ -23,7 +76,7 @@ main > section{
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 	grid-template-rows: 1fr 3em 1.5em 1.5em 2em 1em;
-	column-gap: 1em;
+	column-gap: .5em;
 	
 	margin-bottom: 1em;
 }
@@ -59,7 +112,7 @@ main > section > button:nth-of-type(1){
 	grid-row-start: 1;
 	grid-row-end: 2;
 	
-	z-index: 1;
+	z-index: 0;
     appearance: none;
     border-color: transparent;
     background: none;
@@ -78,7 +131,6 @@ main > section > a{
 	color: var(--color-text);
 	text-decoration: none;
 }
-
 main > section > a:nth-of-type(1){
 	grid-column-start: 1;
 	grid-column-end: -1;
@@ -87,7 +139,6 @@ main > section > a:nth-of-type(1){
 
 	text-align: center;
 }
-
 main > section > a:nth-of-type(2){
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -109,6 +160,9 @@ main > section > p{
 	align-items: center;
 	margin: 0;
 	padding: 0;
+
+	font-family: var(--text-MerriweatherRegular), Georgia, 'Times New Roman', Times, serif;
+	color: var(--color-greytext);
 }
 /* sterren rating */
 main > section > ul{
@@ -141,8 +195,8 @@ main > section > a:nth-of-type(3){
 	justify-content: center;
 	align-items: center;
 
-	font-size: .8em;
-	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: .9em;
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;
 	color: var(--color-carousel-grey-text-light);
 }
 
@@ -154,7 +208,7 @@ main > button:nth-of-type(1){
 	border-radius: 3rem;
 
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
 
 	display: inline-flex;
     align-items: center;
@@ -177,7 +231,7 @@ main > button:nth-of-type(2){
 	border-radius: 3rem;
 
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
 
 	display: inline-flex;
     align-items: center;
@@ -196,6 +250,9 @@ main > button:nth-of-type(2) img{
 	padding: .75em;
 	border-left: .1em solid var(--color-button-border-buy);
 } 
+
+
+
 
 /*****************************************************************************************/
 /* 											Sterren input			 					 */
@@ -287,22 +344,21 @@ main label:has(:focus-visible)::after {
   outline-offset:.25em;
 }
 
+
+
 /* ***************************************************************** */
 /* RATE THIS BOOK + ACTIVITY */
-main p:nth-of-type(1){
+main > p:nth-of-type(1){
 	text-align: center;
 	margin: 0;
-}
 
-main > a:nth-of-type(1) img{
-	width: 1.5em;
-	height: auto;
+	font-size: 1.1em;
 }
 
 main > button:nth-of-type(3){
 	text-decoration: none;
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
 	color: var(--color-text-heading);
 
 	appearance: none;
@@ -310,7 +366,7 @@ main > button:nth-of-type(3){
     background: none;
 
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
 
 	display: inline-flex;
     align-items: center;
@@ -329,58 +385,266 @@ main > button:nth-of-type(3) > img{
 
 /* ***************************************************************** */
 /* UITLEG OVER BOEK*/
-
-main   details summary::marker{
-	content: ' ';
+main p:nth-of-type(2){
+	font-family: var(--text-ProximaItalic), "Montserrat", Arial, sans-serif;
+	font-size: 1.05em;
+}
+main p:nth-of-type(2) > a{
+	font-family: var(--text-ProximaItalic), "Montserrat", Arial, sans-serif;
+	font-size: 1.05em;
+	color:var(--color-text-heading);
 }
 
-main  details summary {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
+
+main> details:nth-of-type(1){
+	position: relative;
+	margin: -1em 0 3em 0;
+	padding: 0;
+}
+
+main p:nth-of-type(3){
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-main  details summary img{
-	width: 1.2em;
-	height: auto;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
 }
 
-/* main details summary::after{
-	content:"read more";
+main > details:nth-of-type(1){
+	position: relative; 
+	margin: 0 0 3em 0; 
+	padding: 0;
+}
+main > details:nth-of-type(1) summary {
+	display: flex;
+	align-items: center;
+	
+	font-size: 1.1em;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+	padding: 0;
+	
+}
+
+main > details:nth-of-type(1)  summary::after{
+	content:"Show more " ;
+
+	text-decoration: underline;
 
 	position: absolute;
 	top: 100%;
-	left: 0;
+	margin-left: .5em;
+}
+main > details[open]:nth-of-type(1) summary::after{
+	content: "Read less";
+	
+	text-decoration: underline;
+
+	margin: 1em 0 0 .5em;
 }
 
-main details [open] summary::after{
-	content: "read less";
-} */
+main > details:nth-of-type(1) p{
+	font-size: 1em;
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;
+}
+
+/****************************************************************/
+/* extra info */
+main > ul:nth-of-type(1){
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+
+	margin: 0;
+	padding: 0;
+}
+main > ul:nth-of-type(1) > li:nth-of-type(1){
+	color: var(--color-greytext);
+	font-size: .9em;
+}
+main > ul:nth-of-type(1) a{
+	color: var(--color-text-heading);
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+	font-size: 1em;
+
+	text-decoration: underline;
+	text-decoration-color: var(--color-underline);
+	text-decoration-thickness: .1em;
+}
+
+main > ul:nth-of-type(1) button{
+	color: var(--color-text-heading);
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+	font-size: 1em;
+
+	appearance: none;
+    border-color: transparent;
+    background: none;
+	
+	text-decoration: underline;
+	text-decoration-color: var(--color-underline);
+	text-decoration-thickness: .1em;
+}
+
+main.is-open > ul:nth-of-type(1){
+	display: none;
+}
+
+main.is-open > ul:nth-of-type(2){
+	display: block;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+
+	margin: 0;
+	padding: 0;
+}
+main.is-open > ul:nth-of-type(2) > li:nth-of-type(1){
+	color: var(--color-greytext);
+	font-size: .9em;
+}
+main.is-open > ul:nth-of-type(2) a{
+	color: var(--color-text-heading);
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+	font-size: 1em;
+
+	text-decoration: underline;
+	text-decoration-color: var(--color-underline);
+	text-decoration-thickness: .1em;
+}
+
+main.is-open > ul:nth-of-type(2) button{
+	color: var(--color-text-heading);
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+	font-size: 1em;
+
+	appearance: none;
+    border-color: transparent;
+    background: none;
+	
+	text-decoration: underline;
+	text-decoration-color: var(--color-underline);
+	text-decoration-thickness: .1em;
+}
+
+main p:nth-of-type(4), p:nth-of-type(5){
+	color: var(--color-carousel-grey-text-dark);
+}
 
 /****************************************************************/
 /* book details & editions klapmenu */
+main> details:nth-of-type(2){
+	position: relative;
+	margin: 2em 0 3em 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+
+main > details:nth-of-type(2) > summary{
+	font-size: 1.2em;
+	text-decoration: underline;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+}
+
+main > details:nth-of-type(2) > summary::after{
+	content:"Book details & editions" ;
+
+	text-decoration: underline;
+
+	position: absolute;
+	top: 100%;
+	margin-left: .5em;
+}
+main > details[open]:nth-of-type(2) > summary::after{
+	content: "Fewer details";
+
+	text-decoration: underline;
+
+	margin: 1em 0 0 .5em;
+}
+
+/****************************************************************/
+/* INHOUD INHOUDbook details & editions klapmenu INHOUD INHOUD */
+main details:nth-of-type(2) > dl {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  column-gap: 1em;
+}
+
+main details:nth-of-type(2) > dl dt, dd {
+  margin: .2em 0;
+  color: var(--color-carousel-grey-text-light);
+}
+
+main details:nth-of-type(2) > dl ul{
+	margin: 0;
+	padding: 0 0 1em 0;
+}
+
+main details:nth-of-type(2) > dl  details{
+	position: relative;
+	margin: 1em 0 1em 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+main > details:nth-of-type(2) > dl  details > summary{
+	font-size: 1em;
+	color: var(--color-carousel-grey-text-dark);
+	text-decoration: underline;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+}
+main > details:nth-of-type(2) > dl  details  summary::after{
+	content:"Show more" ;
+
+	text-decoration: underline;
+
+	position: absolute;
+	top: 100%;
+	margin-left: .5em;
+}
+main > details:nth-of-type(2) > dl details[open] > summary::after{
+	content: "Show less";
+
+	text-decoration: underline;
+
+	margin: 0 0 1em 0;
+}
+
+
+
+main > details:nth-of-type(2) > h2 {
+	color: var(--color-text-heading);
+	font-size: 1.2em;
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;;
+}
+
+
+
 main > details:nth-of-type(2) > ul {
 	display: flex;
 	flex-direction: row;
 	gap: 1em;
-	overflow-x: auto;
-	margin: 0 0 1em 0;
-}
 
+	overflow-x: auto;
+	margin: 0 0 .5em 0;
+	padding: 0;
+} /* carousel werkt niet meer geen idee waarom */
 main > details:nth-of-type(2) > ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15em;
+	width: 10em;
 	margin: 0;
 }
 main > details:nth-of-type(2) > ul li a {
 	margin: 0;
 	text-decoration: none;
 }
-
 main > details:nth-of-type(2) > ul li img {
 	height: 13.6em;
 	width: auto;
@@ -391,7 +655,6 @@ main > details:nth-of-type(2) > ul li img {
 
 	transition: 1s;
 }
-
 main > details:nth-of-type(2) > ul li img:hover {
 	height: 14.1em;
 	width: auto;
@@ -399,39 +662,109 @@ main > details:nth-of-type(2) > ul li img:hover {
 	border-top-right-radius:1em;
 	border-bottom-right-radius:1em;
 }
-
-
-
 main > details:nth-of-type(2) > ul li p {
 	margin: .2em;
 	font-size: .9em;
 
 	color: var(--color-carousel-grey-text-light);
 }
-
 main > details:nth-of-type(2) > ul li p:nth-of-type(1) {	
 	color: var(--color-carousel-grey-text-dark);
 }
 
-main > details:nth-of-type(2) > button{
-	background-color: var(--color-wit);
-	border: .2em solid var(--color-button-border-detail);
-	border-radius: 3rem;
+main > details:nth-of-type(2) > ul::scroll-button(*){
+  width:3em;
+  aspect-ratio:1;
+  margin:0;
+  padding:0;
 
-	font-size: 1em;
-	font-family: var(--text-LatoRegular);
+  background-color:var(--color-button);
+  border:0.01em solid var(--color-button-border);
+  border-radius:50%;
+  cursor:pointer;
 
-	height: 2.75em;
-	width: 100%;
-	padding: 0 1.25em;
-	margin-bottom: 1em;
+  font-size:1em;
+  
+  position:absolute;
+
+}
+main > details:nth-of-type(2) > ul::scroll-button(right) {
+  content: '→' / 'Next';
+  right:clamp(1.5rem, 5vw, 2rem);
+}
+
+main > details:nth-of-type(2) > ul::scroll-button(left) {
+  content: '←' / 'Previous';
+  left:clamp(1.5rem, 5vw, 2rem);
+}
+  
+main > details:nth-of-type(2) > ul::scroll-button(*):disabled {
+  opacity:.5;
 }
 
 
 
+main > details:nth-of-type(2) > button:nth-of-type(1){
+	background-color: var(--color-wit);
+	border: .15em solid var(--color-button-border-detail);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	gap: .4em;
+
+	height: 2.75em;
+	width: 16rem;
+	padding: 0 1em;
+	margin: 5em 2em 1em 2em;
+}
+
+main > details:nth-of-type(2) > h3{
+	color: var(--color-text-heading);
+	font-size: 1em;
+	font-family: var(--text-MerriweatherBold), Georgia, 'Times New Roman', Times, serif;
+
+	margin: 0;
+}
+
+main > details:nth-of-type(2) > h3 > a{
+	text-decoration: none;
+	color: var(--color-text-heading);
+}
+
+main > details:nth-of-type(2) > button:nth-of-type(2){
+	appearance: none;
+    border-color: transparent;
+    background: none;
+
+	font-size: 1em;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	gap: .4em;
+
+	padding: 1em 0;
+	margin: 0;
+}
+main > details:nth-of-type(2) > button:nth-of-type(2) > img{
+	height: 1em;
+	width: 1em;
+}
+
 
 /* ***************************************************************** */
 /* MORE ALSO ENJOYED */
+main > h2{
+	border-top: .05em solid var(--color-divider);
+	padding-top: 1em;
+}
+
 main > ul:nth-of-type(3){
 	display: flex;
 	overflow-x: auto;
@@ -442,7 +775,6 @@ main > ul:nth-of-type(3){
 	scrollbar-width:thin;
 	scrollbar-color: var(--color-selecttext);
 	
-	anchor-name: --carousel;
 }
 main > ul:nth-of-type(3) li{
 	list-style-type:"";
@@ -451,7 +783,7 @@ main > ul:nth-of-type(3) li{
 main > ul:nth-of-type(3) li a{
 	display: grid;
 	grid-template-columns: 1em 100%;
-	grid-template-rows: 13em 2em 1.5em 1em;
+	grid-template-rows: 13em 2em 2em 1em;
 
 	text-decoration: none;
 }
@@ -473,13 +805,13 @@ main > ul:nth-of-type(3) li a img:nth-of-type(1){
 	height: 13em;
 	width: auto;
 }
-main > ul:nth-of-type(3) li a h4{
+main > ul:nth-of-type(3) li a h3{
 	grid-column-start: 1;
 	grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
 
-	margin: .5em 0 0 0;
+	margin:.5em 0 0 0;
 	display: flex;
 	align-items: center;
 
@@ -494,9 +826,11 @@ main > ul:nth-of-type(3) li a p:nth-of-type(1){
     grid-row-end: 4;
 
 	margin: 0;
+	display: flex;
+	align-items: center;
 
 	font-size: .9em;
-	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaRegular),"Montserrat", Arial, sans-serif;
 }
 main > ul:nth-of-type(3) li a img:nth-of-type(2){
 	grid-column-start: 1;
@@ -513,38 +847,84 @@ main > ul:nth-of-type(3) li a p:nth-of-type(2){
     grid-row-start: 4;
     grid-row-end: 5;
 
+	display: flex;
+	align-items: center;
+
 	margin: 0;
 	font-size: .8em;
-	font-family: var(--text-LatoRegular),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;
 }
 main > ul:nth-of-type(3) li a p:nth-of-type(2) strong{
 	font-size: 1em;
-	font-family: var(--text-LatoBold),"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;
+}
+
+main > ul:nth-of-type(3)::scroll-button(*) {
+  width:3em;
+  aspect-ratio:1;
+  margin:0;
+  padding:0;
+
+  background-color:var(--color-button);
+  border:0.01em solid var(--color-button-border);
+  border-radius:50%;
+  cursor:pointer;
+
+  font-size:1em;
+  
+  position:absolute;
+}
+
+main > ul:nth-of-type(3)::scroll-button(right) {
+  content: '→' / 'Next';
+  right:clamp(1.5rem, 5vw, 2rem);
+}
+
+main > ul:nth-of-type(3)::scroll-button(left) {
+  content: '←' / 'Previous';
+  left:clamp(1.5rem, 5vw, 2rem);
+}
+  
+main > ul:nth-of-type(3)::scroll-button(*):disabled {
+  opacity:.5;
 }
 
 
+main > button:nth-of-type(4){
+	background-color: var(--color-wit);
+	border: .2em solid var(--color-button-border-detail);
+	border-radius: 3rem;
 
-/* details{
-	position: relative;
+	font-size: 1em;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;;
+
+	height: 2.75em;
+	width: 100%;
+	padding: 0 1.25em;
+	margin:5em 0 1em 0;
 }
-
-details summary::after{
-	content:"read more";
-
-	position: absolute;
-	top: 100%;
-	left: 0;
-}
-
-details [open] summary::after{
-	content: "read less";
-} */
 
 
 /* ***************************************************************** */
 /* SEARCHBAR */
+main ul:nth-of-type(4){
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 
-main form:nth-of-type(1) {
+	gap: 1em;
+	
+
+	margin: 0;
+	padding: 0;
+}
+
+main ul:nth-of-type(4) li{
+	margin: 0;
+	padding: 0;
+}
+
+main ul:nth-of-type(4) form:nth-of-type(1) {
     position: relative;
     width: 100%;
     max-width: 25em;
@@ -553,22 +933,21 @@ main form:nth-of-type(1) {
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-    
 }
-main form:nth-of-type(1) label{
+main ul:nth-of-type(4) form:nth-of-type(1) label{
     display: none;
 }
-main form:nth-of-type(1) input{
+main ul:nth-of-type(4) form:nth-of-type(1) input{
     width: 100%;
     box-sizing: border-box;
     padding: .8em .75em;
 
     font-size: .6em;
-    border: .12em solid var(--color-greytext);
-    border-radius: .25em;
+    border: .15em solid var(--color-greytext);
+    border-radius: 3rem;
     outline: none;
 }
-main form:nth-of-type(1) button {
+main ul:nth-of-type(4) form:nth-of-type(1) button {
     position: absolute;
     right: .95em;
     top: 50%;
@@ -581,16 +960,38 @@ main form:nth-of-type(1) button {
     padding: 0;
     display: flex; 
 }       
-main form:nth-of-type(1) button img {
+main ul:nth-of-type(4) form:nth-of-type(1) button img {
     width: 1.5em;
     height: 1.5em;
+}
+
+main ul:nth-of-type(4) li > button{
+	background-color: var(--color-wit);
+	border: .15em solid var(--color-button-border-detail);
+	border-radius: 3rem;
+
+	font-size: 1em;
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 1em;
+
+	height: 2em;
+	width: 100%;
+	padding: 0 1.25em;
+	margin: 0;
+}
+main ul:nth-of-type(4) li > button img{
+	width: 1em;
+	height: auto;
 }
 
 /****************************************************************/
 /* lists with this books, from our members */
 
-main > ul:nth-of-type(4){
-	margin: 0 0 1em .5em;
+main > ul:nth-of-type(5){
+	margin:0 0 0 .5em;
 	padding: 0;
 	gap: 1em;
 
@@ -604,11 +1005,42 @@ main > ul:nth-of-type(4){
 	scrollbar-color: var(--color-selecttext);
 }
 
-main > ul:nth-of-type(4) li h3 {
+main > ul:nth-of-type(5)::scroll-button(*) {
+  width:3em;
+  aspect-ratio:1;
+  margin:0;
+  padding:0;
+
+  background-color:var(--color-button);
+  border:0.01em solid var(--color-button-border);
+  border-radius:50%;
+  cursor:pointer;
+
+  font-size:1em;
+  
+  position:absolute;
+}
+
+main > ul:nth-of-type(5)::scroll-button(right) {
+  content: '→' / 'Next';
+  right:clamp(1.5rem, 5vw, 2rem);
+}
+
+main > ul:nth-of-type(5)::scroll-button(left) {
+  content: '←' / 'Previous';
+  left:clamp(1.5rem, 5vw, 2rem);
+}
+  
+main > ul:nth-of-type(5)::scroll-button(*):disabled {
+  opacity:.5;
+}
+
+
+main > ul:nth-of-type(5) li h3 {
 	margin: 0;
 }
-main > ul:nth-of-type(4) li h3 a{
-	font-family: var(--text-LatoRegular);
+main > ul:nth-of-type(5) li h3 a{
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;;
 	font-weight:200;
 	font-size: .9em;
 	text-decoration: none;
@@ -617,15 +1049,15 @@ main > ul:nth-of-type(4) li h3 a{
 	margin: 0;
 }
 
-main > ul:nth-of-type(4) li p{
-	font-family: var(--text-LatoRegular);
+main > ul:nth-of-type(5) li p{
+	font-family: var(--text-ProximaRegular), "Montserrat", Arial, sans-serif;;
 	font-size: .8em;
 	color: var(--color-greytext);
 
 	margin: 0;
 }
 
-main > ul:nth-of-type(4) li ul{
+main > ul:nth-of-type(5) li ul{
 	gap: 1em;
 	margin: 0;
 	padding: 0;
@@ -636,59 +1068,50 @@ main > ul:nth-of-type(4) li ul{
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
-main > ul:nth-of-type(4) li ul li img{
+main > ul:nth-of-type(5) li ul li img{
 	width: 6em;
 	height: auto;
 
 	border-radius: .5em;
 }
 
-main > ul:nth-of-type(4) li:nth-of-type(1) ul{
+main > ul:nth-of-type(5) li:nth-of-type(1) ul{
 	background-color:var(--color-list-books-1);
 }
-main > ul:nth-of-type(4) li:nth-of-type(2) ul{
+main > ul:nth-of-type(5) li:nth-of-type(2) ul{
 	background-color:var(--color-list-books-2);
+	
 }
-main > ul:nth-of-type(4) li:nth-of-type(2) ul li{
+main > ul:nth-of-type(5) li:nth-of-type(2) ul li{
 	transform: rotate(20deg);
 	display: flex;
 	gap: 1em;
 }
-main > ul:nth-of-type(4) li:nth-of-type(3) ul{
+main > ul:nth-of-type(5) li:nth-of-type(3) ul{
 	background-color:var(--color-list-books-3);
 }
-main > ul:nth-of-type(4) li:nth-of-type(3) ul li:nth-of-type(1){
+main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(1){
 	margin-top: 3.7em;
 }
-main > ul:nth-of-type(4) li:nth-of-type(3) ul li:nth-of-type(3){
+main > ul:nth-of-type(5) li:nth-of-type(3) ul li:nth-of-type(3){
 	margin-bottom: 3.7em;
 }
 
-main > button:nth-of-type(4){
+main > button:nth-of-type(5){
 	background-color: var(--color-wit);
 	border: .2em solid var(--color-button-border-detail);
 	border-radius: 3rem;
 
 	font-size: 1em;
-	font-family: var(--text-LatoRegular);
+	font-family: var(--text-ProximaBold), "Montserrat", Arial, sans-serif;;
 
 	height: 2.75em;
 	width: 100%;
 	padding: 0 1.25em;
-	margin-bottom: 1em;
+	margin:5em 0 1em 0;
 }
-
-
-
-
-/*****************************************************************************************/
-/* 											Footer		 							   	 */
-/*****************************************************************************************/
-
-
-/*****************************************************************************************/
-/* 											Toegankelijkheid		 					 */
-/*****************************************************************************************/

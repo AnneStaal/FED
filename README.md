@@ -43,7 +43,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
     De tweede pagina die ik ga namaken is de zoekpagina op pinterest.  
-  <img src="readme-images/BoekDetail.png" width="375px" alt="pagina van de website GoodReads waar je alle details kan zien">
+  <img src="readme-images2/BoekDetail.png" width="375px" alt="pagina van de website GoodReads waar je alle details kan zien">
  
 </details>
 
@@ -59,18 +59,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenreader:
   - Er wordt geen gebruik gemaakt van H2. Ook worden er allemaal headings door elkaar gebruikt. Soms klopt de volgorde wel en soms niet.
     <img src="readme-images/mb_headings.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
-    <img src="readme-images/titf_headings.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
+    <img src="readme-images2/titf_headings.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
   - Sommige linkjes staan er twee keer in, want dan staan ze in de navigatie maar ook in de main.
     <img src="readme-images/mb_links.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
   - Er zijn meerdere linkjes die niet uitleggen waar ze voor zijn, bijv. (edit), here, 2. 
     <img src="readme-images/mb_links_getallen.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
-    <img src="readme-images/titf_links_here.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
+    <img src="readme-images2/titf_links_here.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
   - De boek covers worden heel uitgebreid uitgelegd tussen de linkjes, soms zo erg uitgebreid dat ook de hoeveelheid sterren en beoordelingen erbij staan.
-    <img src="readme-images/titf_links_boeken.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
-    <img src="readme-images/titf_links_boeken_uitgebreid.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
+    <img src="readme-images2/titf_links_boeken.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
+    <img src="readme-images2/titf_links_boeken_uitgebreid.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
   - Ook zijn de linkjes van de footer bij beide pagina's anders. Bij de een wordt er ook uitgelegd dat de linkjes naar de socials gaan van goodreads en bij de andere wordt er allemaal gezet welke social het is.
       <img src="readme-images/mb_footer.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
-      <img src="readme-images/titf_footer.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
+      <img src="readme-images2/titf_footer.JPG" width="250px" alt="screenshot van de linkjes die je ziet met screenreader">
   - Als je gewoon rond tabt op de pagina daar wordt je eigenprofiel geskipt terwijl daaronder ook nog een heel menu zit.
   - Als je de pijltjes gebruikt beweegt de hele pagina heen en weer, want er kan horizontaal gescrold worden.
 
@@ -121,15 +121,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Boek in detail pagina:
   #### De hele pagina: 
   Ook de pagina met details van een boek heb ik in verschillende secties verdeeld.De secties met een rood kruis ga ik niet uitvoeren.
-  <img src="readme-images/details_page.jpg" width="375px" alt="breakdown van een pagina met details van een boek">
+  <img src="readme-images2/details_page.jpg" width="375px" alt="breakdown van een pagina met details van een boek">
   
   Dit is de breakdownschets van de detail pagina.
-  <img src="readme-images/breakdownschets_Book_detail.jpg" width="375px" alt="volledige breakdownschets van een pagina met details van een boek">
+  <img src="readme-images2/breakdownschets_Book_detail.jpg" width="375px" alt="volledige breakdownschets van een pagina met details van een boek">
 
 
   #### dynamisch deel (bijv menu): 
   Hier is mijn breakdownschets van de extra informatie wanneer die is uitgeklapt.
-  <img src="readme-images/breakdownschets_book_detail_extra.jpg" width="375px" alt="breakdown van een extra informatie deel wanneer die is uitgeklapt">
+  <img src="readme-images2/breakdownschets_book_detail_extra.jpg" width="375px" alt="breakdown van een extra informatie deel wanneer die is uitgeklapt">
 </details>
 
 
@@ -200,7 +200,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
   De basis van mijn eerste pagina staat erin. Ik ben nu bezig geweest met het stylen van mijn eerste pagina. Alleen heb ik lijstjes die zowel verticaal als horizontaal moeten staan en ik weet niet zo goed hoe ik dat het makkelijkste kan gaan doen. Mijn header wordt al beter. Ik heb nu wel een dropdown menu, maar als je hem openklapt staat die nog niet hoe ik het wil.
-  <img src="readme-images/voortgang_2.png" width="375px" alt="mijn voortgang van week 3">
+  <img src="readme-images2/voortgang_2.png" width="375px" alt="mijn voortgang van week 3">
   
 
 
@@ -234,12 +234,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
    #### Screenreader:
-  - 
+  - De headings zijn nu weer in goede volgorde en er missen geen headings tussen door.
+    <img src="readme-images/mb_headings_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+    <img src="readme-images2/titf_headings_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+  - Linkjes hebben nu een logische naam of vertellen waar ze voor zijn.
+    <img src="readme-images/mb_links_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+    <img src="readme-images/mb_links2_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+     <img src="readme-images2/titf_links_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+    <img src="readme-images2/titf_links2_mijn.JPG" width="250px" alt="screenshot van wat je ziet met screenreader">
+  - Bij de website van Goodreads zelf hebben ze ook de hoeveelheid sterren en beoordelingen erbij staan, dat heb ik niet gedaan. Wel heb ik daar de titel en de auteur staan.
+  - De linkjes bij de footer en header op beide pagina's zijn nu hetzelfde
+  - Als je tabt door de website volg je een logische lijn door de website en je komt ook bij je profiel en het menu daaronder.
+  - De website beweegt nu niet meer van links naar rechts als je je pijltjes gebruikt.
 
   #### WCAG-checklist:
-  - Je kan nu alleen nog maar horizontaal scroll waar nodig.
-  
-
+  - Zelf heb ik geen darkmodus toegevoegd, dat had ik wel moeten doen, maar ik heb geen svg's in mijn website. Het zijn allemaal afbeeldingen.
+  - Voor de rest was de website al best wel volgens de checklist. Er zijn een paar ervaringselementen die ik heb verbeterd.
 </details>
 
 
@@ -306,19 +316,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/my_books_eigen.jpg" width="375px" alt="uitomst pagina 1">
+  <img src="readme-images2/titf_eigen.jpg" width="375px" alt="uitomst pagina 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Het maken van de code ging goed. Ik wist wat ik aan het doen was en hoe ik verder moest. Ik wist ook welke vragen ik moest stellen. Het maken van de breakdownschetsen hielpen daar wel heel erg bij. Dus het is fijn dat ik daar veel tijd in heb gestoken.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images2/breakdownschets_Book_detail.jpg" width="375px" alt="voorbeeld">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Mijn tijdsindeling heb ik niet helemaal goed gedaan. Dus dat moet ik volgende keer echt anders doen. Ook ben ik te erg bezig geweest met de eerste pagina eerst helemaal in detail maken wat ervoor zorgde dat ik in tijdsnood kwam. Dus voor een volgende keer moet ik eerst alle de pagina's 80% afmaken en als ik tijd over heb de details gaan doen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Licht en donker modus is mij uiteindelijk niet gelukt en dat vind ik wel jammer. Als ik nog extra extra tijd had gehad dan zou ik daar beter naar gekeken hebben. 
+
+  Een ding wat mij echt niet lukte was het blauw randje dat je krijgt als je door een website heen tabt weg te halen. Ik snap het nog steeds niet.
 </details>
 
 
@@ -334,8 +347,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. bron:https://codepen.io/AnneStaal/pen/YPqdxBy?editors=1100 van Sanne	
+  2. ai https://chatgpt.com/share/693199ea-1954-800e-b91f-44c77274fbbf
+  3. https://codepen.io/AnneStaal/pen/VYaqmBW van een van de studentassistenten
 
 </details>

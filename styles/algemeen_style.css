@@ -15,37 +15,37 @@
 :root {
 	color-scheme:light dark;
 	/* kleur */
-	--color-nav-text:#38213A;
-	--color-previous-text:#181818;
-	--color-nav-links:#333333;
-	--color-greytext:#999999;
-	--color-selecttext:	#696969;
-	--color-text:#1e1915;
-	--color-links: #00635d;
-	--color-text-heading:#1e1915;
-	--color-carousel-grey-text-light:#707070;
-	--color-carousel-grey-text-dark:#4f4f4d;
+	--color-nav-text:light-dark(#38213A, #c7dec5);
+	--color-previous-text: light-dark(#181818,#e7e7e7 );
+	--color-nav-links: light-dark(#333333,#cccccc);
+	--color-greytext: light-dark(#999999,#c3c1c1) ;
+	--color-selecttext: light-dark(#696969, #969696)	;
+	--color-text: light-dark(#1e1915, #e1e6ea);
+	--color-links: light-dark(#00635d, #00cfc1);
+	--color-text-heading: light-dark(#1e1915, #e1e6ea);
+	--color-carousel-grey-text-light: light-dark(#707070,#8f8f8f);
+	--color-carousel-grey-text-dark:light-dark(#4f4f4d,#b0b0b2);
 
-	--color-background:#faf8f6;
-	--color-inputfield: #DCD6CC;
+	--color-background:light-dark(#faf8f6,#050709);
+	--color-inputfield: light-dark(#DCD6CC, #232933);
 
-	--color-button-border-detail:#707070;
-	--color-button-border-buy:#409970;
-	--color-button-border:#D6D0C4;
-	--color-button:#F4F1EA;
+	--color-button-border-detail:light-dark(#707070,#8f8f8f);
+	--color-button-border-buy:light-dark(#409970, #41ffa6);
+	--color-button-border:light-dark(#D6D0C4,#363d4d);
+	--color-button:light-dark(#F4F1EA,#191e29);
 
-	--color-underline: #419970;
-	--color-divider:#cfccc9;
+	--color-underline: light-dark(#419970,#0dff8e );
+	--color-divider:light-dark(#cfccc9,#303336 );
 
-	--color-header-hover:#32362d;
-	--color-wit:#ffffff;
-	--color-border-nav:#D8D8D8;
+	--color-header-hover:light-dark(#32362d,#cdc9d2);
+	--color-wit:light-dark(#ffffff, #000000);
+	--color-border-nav:light-dark(#D8D8D8,#272727);
 
 	
 
-	--color-list-books-1:#ebe2d7;
-	--color-list-books-2:#dee0ed;
-	--color-list-books-3:#dce8d1;
+	--color-list-books-1:light-dark(#ebe2d7, #887866);
+	--color-list-books-2:light-dark(#dee0ed, #60647a);
+	--color-list-books-3:light-dark(#dce8d1, #6b795f);
 
 	/* sterren */
 	--color-star-fill:#e87400;
@@ -195,7 +195,7 @@ header > ul > li > details > ul {
 
   width: 100%; /* optioneel: breedte zoals Goodreads */
 
-  background: white;
+  background: var(--color-background);
   border: 1px solid #ddd;
   box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
 }
@@ -319,7 +319,6 @@ header > ul{
 	padding: 0;
 	color:var(--color-nav-text);
 }
-
 
 
 
@@ -449,6 +448,30 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 	width: 80%;
 }
 
+/****************************************************************/
+/* 		 			Dark mode header							*/
+/****************************************************************/
+@media (prefers-color-scheme: dark) {
+ 	header a:nth-of-type(3){
+		filter: invert();
+	}
+
+	header button:nth-of-type(1) img{
+		filter: invert();
+	}
+
+	header nav:nth-of-type(2) ul:nth-of-type(1) img{
+		filter: invert();
+	}
+
+	header nav:nth-of-type(1) ul:nth-of-type(1) img{
+		filter: invert();
+	}
+
+	header > ul  details summary svg{
+		filter: invert();
+	}
+}
 
 /****************************************************************/
 /* 		 			header minimaal 25em 						*/
@@ -619,7 +642,7 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 
 		width: 15.6em; /* optioneel: breedte zoals Goodreads */
 
-		background: white;
+		background: var(--color-background);
 		border: 1px solid #ddd;
 		box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
 	}
@@ -635,7 +658,7 @@ header nav:nth-of-type(2) ul:nth-of-type(3){
 
 		width: 15.6em; /* optioneel: breedte zoals Goodreads */
 
-		background: white;
+		background: var(--color-background);
 		border: 1px solid #ddd;
 		box-shadow: 0 .25em .75em rgba(0,0,0,0.08);
 	}
@@ -802,6 +825,15 @@ footer > p {
 
 	font-size: .9em;
 	margin: 0;
+}
+
+/****************************************************************/
+/* 		 			Dark mode header							*/
+/****************************************************************/
+@media (prefers-color-scheme: dark) {
+	footer img{
+		filter: invert();
+	}
 }
 
 /****************************************************************/
